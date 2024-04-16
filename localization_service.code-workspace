@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "templates",
+      "path": "templates"
+    },
+
+    {
+      "name": "server",
+      "path": "server"
+    }
+  ],
+  "settings": {
+    "cSpell.words": ["mocktail"],
+    "codeTemplateTool.templatesPath": "{workspace}/"
+  }
+}

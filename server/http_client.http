@@ -1,0 +1,5 @@
+### - get index
+GET {{host}}
+content-type: application/json
+
+### - Response

@@ -1,0 +1,7 @@
+include: package:pro_lints/common.yaml
+analyzer:
+  exclude:
+    - build/**
+linter:
+  rules:
+    file_names: false

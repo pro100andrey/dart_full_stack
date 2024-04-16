@@ -1,0 +1,18 @@
+global_options:
+  freezed:
+    runs_before:
+      - json_serializable
+
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          include_if_null: false
+      freezed:
+        options:
+          map: false
+          when:
+            when: false
+            maybe_when: false
+            when_or_null: false

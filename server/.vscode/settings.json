@@ -1,0 +1,10 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "production": { "host": "htts://api.example.com" },
+    "localhost": { "host": "http://localhost:8080" }
+  },
+  "rest-client.logLevel": "verbose",
+  "rest-client.previewOption": "exchange",
+  "rest-client.formParamEncodingStrategy": "always",
+}
