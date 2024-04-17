@@ -4,14 +4,41 @@
       "name": "templates",
       "path": "templates"
     },
-
     {
       "name": "server",
       "path": "server"
+    },
+    {
+      "name": "scripts",
+      "path": "scripts"
     }
   ],
   "settings": {
     "cSpell.words": ["mocktail"],
     "codeTemplateTool.templatesPath": "{workspace}/"
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      // build runner for packages
+      {
+        "label": "build_packages",
+        "options": {
+          "cwd": "${workspaceFolder}/../scripts/"
+        },
+        "type": "shell",
+        "command": "./build_packages.sh",
+        "presentation": {
+          "reveal": "never",
+          "focus": false,
+          "panel": "shared",
+          "showReuseMessage": false,
+          "clear": false
+        },
+        "problemMatcher": [],
+        "group": "build",
+        "detail": "Run build runner for server packages"
+      }
+    ]
   }
 }

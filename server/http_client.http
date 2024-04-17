@@ -1,5 +1,16 @@
-### - get index
-GET {{host}}
+### - get projects 
+GET {{host}}/projects
+    ?ids=1&ids=2&ids=3
+
 content-type: application/json
 
+
+
 ### - Response
+POST {{host}}/projects
+content-type: application/json
+
+{
+    "name": "Project Name",
+    "description": "Project Description"
+}

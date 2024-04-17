@@ -20,7 +20,7 @@ ProjectsResponse _$ProjectsResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProjectsResponse {
-  int get id => throw _privateConstructorUsedError;
+  List<Project> get projects => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +34,7 @@ abstract class $ProjectsResponseCopyWith<$Res> {
           ProjectsResponse value, $Res Function(ProjectsResponse) then) =
       _$ProjectsResponseCopyWithImpl<$Res, ProjectsResponse>;
   @useResult
-  $Res call({int id});
+  $Res call({List<Project> projects});
 }
 
 /// @nodoc
@@ -50,13 +50,13 @@ class _$ProjectsResponseCopyWithImpl<$Res, $Val extends ProjectsResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? projects = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      projects: null == projects
+          ? _value.projects
+          : projects // ignore: cast_nullable_to_non_nullable
+              as List<Project>,
     ) as $Val);
   }
 }
@@ -69,7 +69,7 @@ abstract class _$$ProjectsResponseImplCopyWith<$Res>
       __$$ProjectsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id});
+  $Res call({List<Project> projects});
 }
 
 /// @nodoc
@@ -83,13 +83,13 @@ class __$$ProjectsResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? projects = null,
   }) {
     return _then(_$ProjectsResponseImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      projects: null == projects
+          ? _value._projects
+          : projects // ignore: cast_nullable_to_non_nullable
+              as List<Project>,
     ));
   }
 }
@@ -97,17 +97,23 @@ class __$$ProjectsResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ProjectsResponseImpl implements _ProjectsResponse {
-  _$ProjectsResponseImpl({required this.id});
+  _$ProjectsResponseImpl({required final List<Project> projects})
+      : _projects = projects;
 
   factory _$ProjectsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProjectsResponseImplFromJson(json);
 
+  final List<Project> _projects;
   @override
-  final int id;
+  List<Project> get projects {
+    if (_projects is EqualUnmodifiableListView) return _projects;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_projects);
+  }
 
   @override
   String toString() {
-    return 'ProjectsResponse(id: $id)';
+    return 'ProjectsResponse(projects: $projects)';
   }
 
   @override
@@ -115,12 +121,13 @@ class _$ProjectsResponseImpl implements _ProjectsResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProjectsResponseImpl &&
-            (identical(other.id, id) || other.id == id));
+            const DeepCollectionEquality().equals(other._projects, _projects));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_projects));
 
   @JsonKey(ignore: true)
   @override
@@ -138,13 +145,14 @@ class _$ProjectsResponseImpl implements _ProjectsResponse {
 }
 
 abstract class _ProjectsResponse implements ProjectsResponse {
-  factory _ProjectsResponse({required final int id}) = _$ProjectsResponseImpl;
+  factory _ProjectsResponse({required final List<Project> projects}) =
+      _$ProjectsResponseImpl;
 
   factory _ProjectsResponse.fromJson(Map<String, dynamic> json) =
       _$ProjectsResponseImpl.fromJson;
 
   @override
-  int get id;
+  List<Project> get projects;
   @override
   @JsonKey(ignore: true)
   _$$ProjectsResponseImplCopyWith<_$ProjectsResponseImpl> get copyWith =>
