@@ -14,7 +14,7 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["mocktail"],
+    "cSpell.words": ["mocktail", "pocketbase"],
     "codeTemplateTool.templatesPath": "{workspace}/"
   },
   "tasks": {

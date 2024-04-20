@@ -1,10 +1,8 @@
-### - get projects 
-GET {{host}}/projects
+### - get projects
+GET {{host}}/v1/projects
     ?ids=1&ids=2&ids=3
 
 content-type: application/json
-
-
 
 ### - Response
 POST {{host}}/projects

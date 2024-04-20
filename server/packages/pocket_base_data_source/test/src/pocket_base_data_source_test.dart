@@ -2,9 +2,9 @@
 import 'package:test/test.dart';
 
 void main() {
-  group('AuthDataSource', () {
+  group('PocketBaseDataSource', () {
     test('can be instantiated', () {
-      // expect(AuthDataSource(), isNotNull);
+      // expect(PocketBaseDataSource(), isNotNull);
     });
   });
 }
