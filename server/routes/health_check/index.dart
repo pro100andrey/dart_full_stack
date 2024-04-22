@@ -8,7 +8,6 @@ FutureOr<Response> onRequest(RequestContext context) async {
     case HttpMethod.get:
       return _get(context);
     case HttpMethod.post:
-      return _post(context);
     case HttpMethod.delete:
     case HttpMethod.head:
     case HttpMethod.options:
@@ -20,17 +19,5 @@ FutureOr<Response> onRequest(RequestContext context) async {
 
 /// Handles GET requests
 Future<Response> _get(RequestContext context) async {
-  return Response.json(body: {
-    'message': 'Not implemented yet.',
-  });
-}
-
-/// Handles POST requests
-Future<Response> _post(RequestContext context) async {
-  return Response.json(
-    statusCode: HttpStatus.created,
-    body: {
-      'message': 'Not implemented yet.',
-    },
-  );
+  return Response.json(statusCode: HttpStatus.ok);
 }

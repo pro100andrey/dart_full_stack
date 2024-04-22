@@ -15,6 +15,7 @@ dependencies:
   dart_frog_auth: ^1.1.0
   users_data_source:
     path: ./packages/users_data_source
+  dart_frog_request_logger: ^0.0.2
 
 dev_dependencies:
   mocktail: ^1.0.3

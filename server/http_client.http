@@ -1,3 +1,9 @@
+
+### Health Check
+GET {{host}}/health_check
+
+### - Auth with email
+
 ### - Get projects
 @token = "sfsdf"
 GET {{host}}/v1/projects

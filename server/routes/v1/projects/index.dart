@@ -19,7 +19,7 @@ FutureOr<Response> onRequest(RequestContext context) async {
   }
 }
 
-/// Handles GET requests for projects.
+/// Handles GET requests
 Future<Response> _get(RequestContext context) async {
   final dataSource = context.read<ProjectsDataSource>();
   final params = context.request.uri.queryParametersAll;
@@ -30,7 +30,7 @@ Future<Response> _get(RequestContext context) async {
   return Response.json(body: projects.toJson());
 }
 
-/// Handles POST requests for projects.
+/// Handles POST requests
 Future<Response> _post(RequestContext context) async {
   final dataSource = context.read<ProjectsDataSource>();
   final data = await context.request.json();

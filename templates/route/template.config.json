@@ -1,0 +1,11 @@
+{
+    "name": "Route",
+    "variables": [
+        {
+            "name": "routeName",
+            "style": {
+                "case": "auto"
+            }
+        }
+    ]
+}

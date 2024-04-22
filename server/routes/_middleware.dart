@@ -1,4 +1,6 @@
 import 'package:dart_frog/dart_frog.dart';
+import 'package:dart_frog_request_logger/dart_frog_request_logger.dart';
+import 'package:dart_frog_request_logger/log_formatters.dart';
 import 'package:prisma_data_source/data_source.dart';
 import 'package:projects_data_source/projects_data_source.dart';
 import 'package:users_data_source/users.dart';
@@ -13,7 +15,19 @@ final _usersDataSource = PrismaUsersDataSource(
 
 Handler middleware(Handler handler) {
   return handler
-      .use(requestLogger())
+      .use(
+        provider(
+          (context) => RequestLogger(
+            headers: context.request.headers,
+            logFormatter: formatSimpleLog(),
+          ),
+        ),
+      )
+      .use(requestLogger(
+        logger: (message, isError) {
+          print("$message\n");
+        },
+      ))
       .use(provider<ProjectsDataSource>((_) => _projectsDataSource))
       .use(provider<UsersDataSource>((_) => _usersDataSource));
 }
