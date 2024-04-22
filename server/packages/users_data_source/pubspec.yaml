@@ -1,5 +1,5 @@
-name: auth_data_source
-description: A generic interface for managing auth
+name: users_data_source
+description:  The UsersDataSource package.
 version: 0.1.0+1
 publish_to: none
 

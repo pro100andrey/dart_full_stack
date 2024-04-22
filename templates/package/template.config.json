@@ -1,0 +1,11 @@
+{
+    "name": "Package",
+    "variables": [
+        {
+            "name": "packageName",
+            "style": {
+                "case": "auto"
+            }
+        }
+    ]
+}
