@@ -1,19 +1,20 @@
-import 'package:prisma_orm/prisma_orm.dart' as orm;
+import 'package:orm/orm.dart';
+import 'package:prisma_orm/prisma_orm.dart' as prisma;
 import 'package:projects_data_source/projects_data_source.dart';
 
 class PrismaProjectsBaseDataSource implements ProjectsDataSource {
-  PrismaProjectsBaseDataSource({required orm.PrismaClient client})
+  PrismaProjectsBaseDataSource({required prisma.PrismaClient client})
       : _client = client;
 
-  final orm.PrismaClient _client;
+  final prisma.PrismaClient _client;
 
   @override
   Future<Project> create(CreateProjectRequest request) async {
     final result = await _client.project.create(
-      data: orm.PrismaUnion.$1(
-        orm.ProjectCreateInput(
+      data: PrismaUnion.$1(
+        prisma.ProjectCreateInput(
           name: request.name,
-          description: orm.PrismaUnion.$1(request.description),
+          description: PrismaUnion.$1(request.description),
         ),
       ),
     );

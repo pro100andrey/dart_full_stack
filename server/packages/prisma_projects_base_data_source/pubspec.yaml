@@ -7,11 +7,11 @@ environment:
   sdk: ^3.3.3
 
 dependencies:
+  orm: ^4.1.0
   prisma_orm:
     path: ../prisma_orm
   projects_data_source:
     path: ../projects_data_source
-
 
 dev_dependencies:
   mocktail: ^1.0.3
