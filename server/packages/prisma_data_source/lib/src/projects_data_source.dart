@@ -2,8 +2,8 @@ import 'package:orm/orm.dart';
 import 'package:prisma_orm/prisma_orm.dart' as prisma;
 import 'package:projects_data_source/projects_data_source.dart';
 
-class PrismaProjectsBaseDataSource implements ProjectsDataSource {
-  PrismaProjectsBaseDataSource({required prisma.PrismaClient client})
+class PrismaProjectsDataSource implements ProjectsDataSource {
+  PrismaProjectsDataSource({required prisma.PrismaClient client})
       : _client = client;
 
   final prisma.PrismaClient _client;

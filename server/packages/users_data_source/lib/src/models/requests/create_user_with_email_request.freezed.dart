@@ -21,7 +21,8 @@ CreateUserWithEmailRequest _$CreateUserWithEmailRequestFromJson(
 
 /// @nodoc
 mixin _$CreateUserWithEmailRequest {
-  int get id => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +37,7 @@ abstract class $CreateUserWithEmailRequestCopyWith<$Res> {
       _$CreateUserWithEmailRequestCopyWithImpl<$Res,
           CreateUserWithEmailRequest>;
   @useResult
-  $Res call({int id});
+  $Res call({String email, String password});
 }
 
 /// @nodoc
@@ -53,13 +54,18 @@ class _$CreateUserWithEmailRequestCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? email = null,
+    Object? password = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -73,7 +79,7 @@ abstract class _$$CreateUserWithEmailRequestImplCopyWith<$Res>
       __$$CreateUserWithEmailRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id});
+  $Res call({String email, String password});
 }
 
 /// @nodoc
@@ -89,13 +95,18 @@ class __$$CreateUserWithEmailRequestImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? email = null,
+    Object? password = null,
   }) {
     return _then(_$CreateUserWithEmailRequestImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -103,18 +114,21 @@ class __$$CreateUserWithEmailRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CreateUserWithEmailRequestImpl implements _CreateUserWithEmailRequest {
-  _$CreateUserWithEmailRequestImpl({required this.id});
+  _$CreateUserWithEmailRequestImpl(
+      {required this.email, required this.password});
 
   factory _$CreateUserWithEmailRequestImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$CreateUserWithEmailRequestImplFromJson(json);
 
   @override
-  final int id;
+  final String email;
+  @override
+  final String password;
 
   @override
   String toString() {
-    return 'CreateUserWithEmailRequest(id: $id)';
+    return 'CreateUserWithEmailRequest(email: $email, password: $password)';
   }
 
   @override
@@ -122,12 +136,14 @@ class _$CreateUserWithEmailRequestImpl implements _CreateUserWithEmailRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateUserWithEmailRequestImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, email, password);
 
   @JsonKey(ignore: true)
   @override
@@ -146,14 +162,17 @@ class _$CreateUserWithEmailRequestImpl implements _CreateUserWithEmailRequest {
 
 abstract class _CreateUserWithEmailRequest
     implements CreateUserWithEmailRequest {
-  factory _CreateUserWithEmailRequest({required final int id}) =
-      _$CreateUserWithEmailRequestImpl;
+  factory _CreateUserWithEmailRequest(
+      {required final String email,
+      required final String password}) = _$CreateUserWithEmailRequestImpl;
 
   factory _CreateUserWithEmailRequest.fromJson(Map<String, dynamic> json) =
       _$CreateUserWithEmailRequestImpl.fromJson;
 
   @override
-  int get id;
+  String get email;
+  @override
+  String get password;
   @override
   @JsonKey(ignore: true)
   _$$CreateUserWithEmailRequestImplCopyWith<_$CreateUserWithEmailRequestImpl>

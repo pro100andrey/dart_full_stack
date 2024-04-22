@@ -7,6 +7,7 @@ part 'public_users_request.g.dart';
 class PublicUsersRequest with _$PublicUsersRequest {
   factory PublicUsersRequest({
     required int id,
+    required String name,
   }) = _PublicUsersRequest;
 
   factory PublicUsersRequest.fromJson(Map<String, dynamic> json) =>

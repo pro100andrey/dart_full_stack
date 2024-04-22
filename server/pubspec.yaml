@@ -10,9 +10,11 @@ dependencies:
   dart_frog: ^1.1.0
   projects_data_source:
     path: ./packages/projects_data_source
-  prisma_projects_data_source:
-    path: ./packages/prisma_projects_base_data_source
+  prisma_data_source:
+    path: ./packages/prisma_data_source
   dart_frog_auth: ^1.1.0
+  users_data_source:
+    path: ./packages/users_data_source
 
 dev_dependencies:
   mocktail: ^1.0.3

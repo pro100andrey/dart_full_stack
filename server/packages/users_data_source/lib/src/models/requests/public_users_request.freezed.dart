@@ -21,6 +21,7 @@ PublicUsersRequest _$PublicUsersRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PublicUsersRequest {
   int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,7 @@ abstract class $PublicUsersRequestCopyWith<$Res> {
           PublicUsersRequest value, $Res Function(PublicUsersRequest) then) =
       _$PublicUsersRequestCopyWithImpl<$Res, PublicUsersRequest>;
   @useResult
-  $Res call({int id});
+  $Res call({int id, String name});
 }
 
 /// @nodoc
@@ -51,12 +52,17 @@ class _$PublicUsersRequestCopyWithImpl<$Res, $Val extends PublicUsersRequest>
   @override
   $Res call({
     Object? id = null,
+    Object? name = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -69,7 +75,7 @@ abstract class _$$PublicUsersRequestImplCopyWith<$Res>
       __$$PublicUsersRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id});
+  $Res call({int id, String name});
 }
 
 /// @nodoc
@@ -84,12 +90,17 @@ class __$$PublicUsersRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
+    Object? name = null,
   }) {
     return _then(_$PublicUsersRequestImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -97,17 +108,19 @@ class __$$PublicUsersRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PublicUsersRequestImpl implements _PublicUsersRequest {
-  _$PublicUsersRequestImpl({required this.id});
+  _$PublicUsersRequestImpl({required this.id, required this.name});
 
   factory _$PublicUsersRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$PublicUsersRequestImplFromJson(json);
 
   @override
   final int id;
+  @override
+  final String name;
 
   @override
   String toString() {
-    return 'PublicUsersRequest(id: $id)';
+    return 'PublicUsersRequest(id: $id, name: $name)';
   }
 
   @override
@@ -115,12 +128,13 @@ class _$PublicUsersRequestImpl implements _PublicUsersRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PublicUsersRequestImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, id, name);
 
   @JsonKey(ignore: true)
   @override
@@ -138,14 +152,17 @@ class _$PublicUsersRequestImpl implements _PublicUsersRequest {
 }
 
 abstract class _PublicUsersRequest implements PublicUsersRequest {
-  factory _PublicUsersRequest({required final int id}) =
-      _$PublicUsersRequestImpl;
+  factory _PublicUsersRequest(
+      {required final int id,
+      required final String name}) = _$PublicUsersRequestImpl;
 
   factory _PublicUsersRequest.fromJson(Map<String, dynamic> json) =
       _$PublicUsersRequestImpl.fromJson;
 
   @override
   int get id;
+  @override
+  String get name;
   @override
   @JsonKey(ignore: true)
   _$$PublicUsersRequestImplCopyWith<_$PublicUsersRequestImpl> get copyWith =>
