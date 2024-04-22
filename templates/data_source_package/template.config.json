@@ -1,0 +1,11 @@
+{
+    "name": "Package (data source)",
+    "variables": [
+        {
+            "name": "packageName",
+            "style": {
+                "case": "auto"
+            }
+        }
+    ]
+}
