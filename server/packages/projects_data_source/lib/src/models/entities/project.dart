@@ -8,7 +8,7 @@ class Project with _$Project {
   factory Project({
     required String id,
     required String name,
-    required String description,
+    required String? description,
     required DateTime createdAt,
     required DateTime updatedAt,
   }) = _Project;

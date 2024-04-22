@@ -10,8 +10,8 @@ dependencies:
   dart_frog: ^1.1.0
   projects_data_source:
     path: ./packages/projects_data_source
-  pocket_base_data_source:
-    path: ./packages/pocket_base_data_source
+  prisma_projects_data_source:
+    path: ./packages/prisma_projects_base_data_source
 
 dev_dependencies:
   mocktail: ^1.0.3

@@ -1,5 +1,5 @@
-name: pocket_base_data_source
-description: Pocket base data source
+name: prisma_orm
+description: Prisma orm
 version: 0.1.0+1
 publish_to: none
 
@@ -7,13 +7,10 @@ environment:
   sdk: ^3.3.3
 
 dependencies:
-  pocketbase: ^0.18.1
-  projects_data_source:
-    path: ../projects_data_source
+  orm: ^4.1.0
 
 dev_dependencies:
   mocktail: ^1.0.3
-
   pro_lints: ^2.0.2
   test: ^1.25.4
 

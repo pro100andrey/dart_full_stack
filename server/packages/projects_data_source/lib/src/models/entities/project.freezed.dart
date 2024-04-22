@@ -22,7 +22,7 @@ Project _$ProjectFromJson(Map<String, dynamic> json) {
 mixin _$Project {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
   DateTime get updatedAt => throw _privateConstructorUsedError;
 
@@ -39,7 +39,7 @@ abstract class $ProjectCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      String description,
+      String? description,
       DateTime createdAt,
       DateTime updatedAt});
 }
@@ -59,7 +59,7 @@ class _$ProjectCopyWithImpl<$Res, $Val extends Project>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? createdAt = null,
     Object? updatedAt = null,
   }) {
@@ -72,10 +72,10 @@ class _$ProjectCopyWithImpl<$Res, $Val extends Project>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -98,7 +98,7 @@ abstract class _$$ProjectImplCopyWith<$Res> implements $ProjectCopyWith<$Res> {
   $Res call(
       {String id,
       String name,
-      String description,
+      String? description,
       DateTime createdAt,
       DateTime updatedAt});
 }
@@ -116,7 +116,7 @@ class __$$ProjectImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? createdAt = null,
     Object? updatedAt = null,
   }) {
@@ -129,10 +129,10 @@ class __$$ProjectImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -163,7 +163,7 @@ class _$ProjectImpl implements _Project {
   @override
   final String name;
   @override
-  final String description;
+  final String? description;
   @override
   final DateTime createdAt;
   @override
@@ -212,7 +212,7 @@ abstract class _Project implements Project {
   factory _Project(
       {required final String id,
       required final String name,
-      required final String description,
+      required final String? description,
       required final DateTime createdAt,
       required final DateTime updatedAt}) = _$ProjectImpl;
 
@@ -223,7 +223,7 @@ abstract class _Project implements Project {
   @override
   String get name;
   @override
-  String get description;
+  String? get description;
   @override
   DateTime get createdAt;
   @override
