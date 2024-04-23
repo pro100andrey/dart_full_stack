@@ -13,22 +13,28 @@ FutureOr<Response> onRequest(RequestContext context) async =>
 
 /// Handles GET requests
 Future<Response> _get(RequestContext context) async {
-  final dataSource = context.read<ProjectsDataSource>();
   final params = context.request.uri.queryParametersAll;
-  final projectsRequest = ProjectsRequest.fromJson(params);
+  final request = ProjectsRequest.fromJson(params);
 
-  final projects = await dataSource.read(projectsRequest);
-
-  return OkResponse(projects.toJson());
+  return context
+      .read<ProjectsDataSource>()
+      .read(request)
+      .then<Response>((project) => OkResponse(project.toJson()))
+      .onError(
+        (error, stackTrace) => InternalServerErrorResponse(error.toString()),
+      );
 }
 
 /// Handles POST requests
 Future<Response> _post(RequestContext context) async {
-  final dataSource = context.read<ProjectsDataSource>();
   final data = await context.request.json();
-  final request = CreateProjectRequest.fromJson(data as Map<String, dynamic>);
+  final request = CreateProjectRequest.fromJson(data);
 
-  final createdProject = await dataSource.create(request);
-
-  return CreatedResponse(createdProject.toJson());
+  return context
+      .read<ProjectsDataSource>()
+      .create(request)
+      .then<Response>((project) => CreatedResponse(project.toJson()))
+      .onError(
+        (error, stackTrace) => InternalServerErrorResponse(error.toString()),
+      );
 }
