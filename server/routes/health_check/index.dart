@@ -1,23 +1,13 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
+import 'package:server/responses/base_response_data.dart';
 
-FutureOr<Response> onRequest(RequestContext context) async {
-  switch (context.request.method) {
-    case HttpMethod.get:
-      return _get(context);
-    case HttpMethod.post:
-    case HttpMethod.delete:
-    case HttpMethod.head:
-    case HttpMethod.options:
-    case HttpMethod.patch:
-    case HttpMethod.put:
-      return Response(statusCode: HttpStatus.methodNotAllowed);
-  }
-}
+FutureOr<Response> onRequest(RequestContext context) async =>
+    switch (context.request.method) {
+      HttpMethod.get => _get(context),
+      _ => Future.value(MethodNotAllowedResponse()),
+    };
 
 /// Handles GET requests
-Future<Response> _get(RequestContext context) async {
-  return Response.json(statusCode: HttpStatus.ok);
-}
+Future<Response> _get(RequestContext context) async => Response.json();

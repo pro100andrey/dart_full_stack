@@ -14,30 +14,30 @@ final _usersDataSource = PrismaUsersDataSource(
   client: PrismaClient(),
 );
 
-Handler middleware(Handler handler) {
-  return handler
-      .use(
-        provider(
-          (context) => Authenticator(secret: 'secret'),
+Handler middleware(Handler handler) => handler
+    .use(
+      provider(
+        (context) => Authenticator(secret: 'secret'),
+      ),
+    )
+    .use(
+      provider(
+        (context) => RequestLogger(
+          headers: context.request.headers,
+          logFormatter: formatSimpleLog(),
         ),
-      )
-      .use(
-        provider(
-          (context) => RequestLogger(
-            headers: context.request.headers,
-            logFormatter: formatSimpleLog(),
-          ),
-        ),
-      )
-      .use(requestLogger(
+      ),
+    )
+    .use(
+      requestLogger(
         logger: (message, isError) {
-          print("$message\n");
+          print('$message\n');
         },
-      ))
-      .use(
-        provider<ProjectsDataSource>((context) => _projectsDataSource),
-      )
-      .use(
-        provider<UsersDataSource>((context) => _usersDataSource),
-      );
-}
+      ),
+    )
+    .use(
+      provider<ProjectsDataSource>((context) => _projectsDataSource),
+    )
+    .use(
+      provider<UsersDataSource>((context) => _usersDataSource),
+    );

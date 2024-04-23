@@ -19,18 +19,16 @@ FutureOr<Response> onRequest(RequestContext context) async {
 }
 
 /// Handles GET requests
-Future<Response> _get(RequestContext context) async {
-  return Response.json(body: {
-    'message': 'Not implemented yet.',
-  });
-}
+Future<Response> _get(RequestContext context) async => Response.json(
+      body: {
+        'message': 'Not implemented yet.',
+      },
+    );
 
 /// Handles POST requests
-Future<Response> _post(RequestContext context) async {
-  return Response.json(
-    statusCode: HttpStatus.created,
-    body: {
-      'message': 'Not implemented yet.',
-    },
-  );
-}
+Future<Response> _post(RequestContext context) async => Response.json(
+      statusCode: HttpStatus.created,
+      body: {
+        'message': 'Not implemented yet.',
+      },
+    );

@@ -1,5 +1,9 @@
 #bin/bash!
 
+pushd ../server/packages/models
+dart run build_runner build --delete-conflicting-outputs
+popd
+
 pushd ../server/packages/projects_data_source
 dart run build_runner build --delete-conflicting-outputs
 popd
