@@ -1,3 +1,4 @@
+import 'package:auth_data_source/auth.dart';
 import 'package:dart_frog/dart_frog.dart';
 import 'package:dart_frog_request_logger/dart_frog_request_logger.dart';
 import 'package:dart_frog_request_logger/log_formatters.dart';
@@ -17,6 +18,11 @@ Handler middleware(Handler handler) {
   return handler
       .use(
         provider(
+          (context) => Authenticator(secret: 'secret'),
+        ),
+      )
+      .use(
+        provider(
           (context) => RequestLogger(
             headers: context.request.headers,
             logFormatter: formatSimpleLog(),
@@ -28,6 +34,10 @@ Handler middleware(Handler handler) {
           print("$message\n");
         },
       ))
-      .use(provider<ProjectsDataSource>((_) => _projectsDataSource))
-      .use(provider<UsersDataSource>((_) => _usersDataSource));
+      .use(
+        provider<ProjectsDataSource>((context) => _projectsDataSource),
+      )
+      .use(
+        provider<UsersDataSource>((context) => _usersDataSource),
+      );
 }
