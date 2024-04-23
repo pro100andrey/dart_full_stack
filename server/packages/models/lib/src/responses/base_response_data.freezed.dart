@@ -14,26 +14,18 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-BaseResponseData _$BaseResponseDataFromJson(
-  Map<String, dynamic> json,
-) {
-  switch (json['runtimeType']) {
-    case 'failed':
-      return FailedResponse.fromJson(
-        json,
-      );
-    case 'empty':
-      return EmptyResponse.fromJson(
-        json,
-      );
-    case 'data':
-      return DataResponse.fromJson(
-        json,
-      );
+BaseResponseData _$BaseResponseDataFromJson(Map<String, dynamic> json) {
+  switch (json['type']) {
+    case 'Failed':
+      return FailedResponse.fromJson(json);
+    case 'Empty':
+      return EmptyResponse.fromJson(json);
+    case 'Data':
+      return DataResponse.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'BaseResponseData',
-          'Invalid union type "${json['runtimeType']}"!');
+      throw CheckedFromJsonException(json, 'type', 'BaseResponseData',
+          'Invalid union type "${json['type']}"!');
   }
 }
 
@@ -95,19 +87,15 @@ class __$$FailedResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FailedResponseImpl implements FailedResponse {
   _$FailedResponseImpl({required this.message, final String? $type})
-      : $type = $type ?? 'failed';
+      : $type = $type ?? 'Failed';
 
-  factory _$FailedResponseImpl.fromJson(
-    Map<String, dynamic> json,
-  ) =>
-      _$$FailedResponseImplFromJson(
-        json,
-      );
+  factory _$FailedResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FailedResponseImplFromJson(json);
 
   @override
   final String? message;
 
-  @JsonKey(name: 'runtimeType')
+  @JsonKey(name: 'type')
   final String $type;
 
   @override
@@ -146,9 +134,8 @@ abstract class FailedResponse implements BaseResponseData {
   factory FailedResponse({required final String? message}) =
       _$FailedResponseImpl;
 
-  factory FailedResponse.fromJson(
-    Map<String, dynamic> json,
-  ) = _$FailedResponseImpl.fromJson;
+  factory FailedResponse.fromJson(Map<String, dynamic> json) =
+      _$FailedResponseImpl.fromJson;
 
   String? get message;
   @JsonKey(ignore: true)
@@ -190,20 +177,16 @@ class __$$EmptyResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$EmptyResponseImpl implements EmptyResponse {
-  _$EmptyResponseImpl({required this.message, final String? $type})
-      : $type = $type ?? 'empty';
+  _$EmptyResponseImpl({this.message, final String? $type})
+      : $type = $type ?? 'Empty';
 
-  factory _$EmptyResponseImpl.fromJson(
-    Map<String, dynamic> json,
-  ) =>
-      _$$EmptyResponseImplFromJson(
-        json,
-      );
+  factory _$EmptyResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EmptyResponseImplFromJson(json);
 
   @override
   final String? message;
 
-  @JsonKey(name: 'runtimeType')
+  @JsonKey(name: 'type')
   final String $type;
 
   @override
@@ -238,11 +221,10 @@ class _$EmptyResponseImpl implements EmptyResponse {
 }
 
 abstract class EmptyResponse implements BaseResponseData {
-  factory EmptyResponse({required final String? message}) = _$EmptyResponseImpl;
+  factory EmptyResponse({final String? message}) = _$EmptyResponseImpl;
 
-  factory EmptyResponse.fromJson(
-    Map<String, dynamic> json,
-  ) = _$EmptyResponseImpl.fromJson;
+  factory EmptyResponse.fromJson(Map<String, dynamic> json) =
+      _$EmptyResponseImpl.fromJson;
 
   String? get message;
   @JsonKey(ignore: true)
@@ -282,19 +264,15 @@ class __$$DataResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DataResponseImpl implements DataResponse {
   _$DataResponseImpl({required this.data, final String? $type})
-      : $type = $type ?? 'data';
+      : $type = $type ?? 'Data';
 
-  factory _$DataResponseImpl.fromJson(
-    Map<String, dynamic> json,
-  ) =>
-      _$$DataResponseImplFromJson(
-        json,
-      );
+  factory _$DataResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DataResponseImplFromJson(json);
 
   @override
   final Object? data;
 
-  @JsonKey(name: 'runtimeType')
+  @JsonKey(name: 'type')
   final String $type;
 
   @override
@@ -332,9 +310,8 @@ class _$DataResponseImpl implements DataResponse {
 abstract class DataResponse implements BaseResponseData {
   factory DataResponse({required final Object? data}) = _$DataResponseImpl;
 
-  factory DataResponse.fromJson(
-    Map<String, dynamic> json,
-  ) = _$DataResponseImpl.fromJson;
+  factory DataResponse.fromJson(Map<String, dynamic> json) =
+      _$DataResponseImpl.fromJson;
 
   Object? get data;
   @JsonKey(ignore: true)

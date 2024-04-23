@@ -3,14 +3,14 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'base_response_data.freezed.dart';
 part 'base_response_data.g.dart';
 
-@Freezed(genericArgumentFactories: true)
+@Freezed(unionKey: 'type', unionValueCase: FreezedUnionCase.pascal)
 class BaseResponseData with _$BaseResponseData {
   factory BaseResponseData.failed({
     required String? message,
   }) = FailedResponse;
 
   factory BaseResponseData.empty({
-    required String? message,
+    String? message,
   }) = EmptyResponse;
 
   factory BaseResponseData.data({

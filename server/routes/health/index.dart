@@ -10,4 +10,4 @@ FutureOr<Response> onRequest(RequestContext context) async =>
     };
 
 /// Handles GET requests
-Future<Response> _get(RequestContext context) async => Response.json();
+Future<Response> _get(RequestContext context) async => OkResponse({});

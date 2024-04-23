@@ -57,10 +57,29 @@ class NotFoundResponse extends Response {
 }
 
 /// OK response. Status code 200.
-class CreatedResponse extends Response {
-  CreatedResponse([String? message])
+class CreatedEmptyResponse extends Response {
+  CreatedEmptyResponse([String? message])
       : super.json(
           statusCode: HttpStatus.created,
           body: EmptyResponse(message: message).toJson(),
+        );
+}
+
+/// OK response. Status code 200.
+class CreatedResponse extends Response {
+  CreatedResponse(Object? data)
+      : super.json(
+          statusCode: HttpStatus.created,
+          body: DataResponse(data: data).toJson(),
+        );
+}
+
+class OkResponse extends Response {
+  OkResponse([Object? data])
+      : super.json(
+          statusCode: HttpStatus.ok,
+          body: data == null
+              ? EmptyResponse().toJson()
+              : DataResponse(data: data).toJson(),
         );
 }

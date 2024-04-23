@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
 import 'package:projects_data_source/projects_data_source.dart';
@@ -20,7 +19,7 @@ Future<Response> _get(RequestContext context) async {
 
   final projects = await dataSource.read(projectsRequest);
 
-  return Response.json(body: projects.toJson());
+  return OkResponse(projects.toJson());
 }
 
 /// Handles POST requests
@@ -31,8 +30,5 @@ Future<Response> _post(RequestContext context) async {
 
   final createdProject = await dataSource.create(request);
 
-  return Response.json(
-    statusCode: HttpStatus.created,
-    body: createdProject.toJson(),
-  );
+  return CreatedResponse(createdProject.toJson());
 }

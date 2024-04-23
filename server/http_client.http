@@ -1,6 +1,7 @@
 
+
 ### Health Check
-GET {{host}}/health_check
+GET {{host}}/health
 
 ### - Auth with email
 
@@ -12,7 +13,7 @@ GET {{host}}/v1/projects
 content-type: application/json
 
 ### - Response
-POST {{host}}/projects
+POST {{host}}/v1/projects
 content-type: application/json
 Authorization: Basic {{token}}
 
