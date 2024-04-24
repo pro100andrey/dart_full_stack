@@ -8,18 +8,18 @@ environment:
 
 dependencies:
   auth:
-    path: ./packages/auth
+    path: ../packages/auth
   dart_frog: ^1.1.0
   dart_frog_auth: ^1.1.0
   dart_frog_request_logger: ^0.0.2
   models:
-    path: ./packages/models
+    path: ../packages/models
   prisma_repositories:
-    path: ./packages/prisma_repositories
+    path: ../packages/prisma_repositories
   projects_repository:
-    path: ./packages/projects_repository
+    path: ../packages/projects_repository
   users_repository:
-    path: ./packages/users_repository
+    path: ../packages/users_repository
 
 dev_dependencies:
   mocktail: ^1.0.3
