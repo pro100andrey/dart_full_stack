@@ -1,5 +1,5 @@
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
-import 'package:users_data_source/users.dart';
+import 'package:users_repository/users_repository.dart';
 
 class Authenticator {
   Authenticator({

@@ -1,5 +1,5 @@
-class User {
-  const User({
+class UserEntity {
+  const UserEntity({
     this.id,
     this.email,
     this.name,
@@ -7,7 +7,7 @@ class User {
     this.updatedAt,
   });
 
-  factory User.fromJson(Map json) => User(
+  factory UserEntity.fromJson(Map json) => UserEntity(
         id: json['id'],
         email: json['email'],
         name: json['name'],
@@ -34,8 +34,8 @@ class User {
       };
 }
 
-class Project {
-  const Project({
+class ProjectEntity {
+  const ProjectEntity({
     this.id,
     this.name,
     this.description,
@@ -43,7 +43,7 @@ class Project {
     this.updatedAt,
   });
 
-  factory Project.fromJson(Map json) => Project(
+  factory ProjectEntity.fromJson(Map json) => ProjectEntity(
         id: json['id'],
         name: json['name'],
         description: json['description'],

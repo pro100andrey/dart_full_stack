@@ -7,19 +7,19 @@ environment:
   sdk: ^3.3.3
 
 dependencies:
-  auth_data_source:
-    path: ./packages/auth_data_source
+  auth:
+    path: ./packages/auth
   dart_frog: ^1.1.0
   dart_frog_auth: ^1.1.0
   dart_frog_request_logger: ^0.0.2
   models:
     path: ./packages/models
-  prisma_data_source:
-    path: ./packages/prisma_data_source
-  projects_data_source:
-    path: ./packages/projects_data_source
-  users_data_source:
-    path: ./packages/users_data_source
+  prisma_repositories:
+    path: ./packages/prisma_repositories
+  projects_repository:
+    path: ./packages/projects_repository
+  users_repository:
+    path: ./packages/users_repository
 
 dev_dependencies:
   mocktail: ^1.0.3

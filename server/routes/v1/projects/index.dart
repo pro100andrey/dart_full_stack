@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:dart_frog/dart_frog.dart';
-import 'package:projects_data_source/projects_data_source.dart';
+import 'package:models/models.dart';
+import 'package:projects_repository/projects_repository.dart';
 import 'package:server/responses/base_response_data.dart';
 
 FutureOr<Response> onRequest(RequestContext context) async =>
@@ -17,7 +18,7 @@ Future<Response> _get(RequestContext context) async {
   final request = ProjectsRequest.fromJson(params);
 
   return context
-      .read<ProjectsDataSource>()
+      .read<ProjectsRepository>()
       .read(request)
       .then<Response>((project) => OkResponse(project.toJson()))
       .onError(
@@ -31,7 +32,7 @@ Future<Response> _post(RequestContext context) async {
   final request = CreateProjectRequest.fromJson(data);
 
   return context
-      .read<ProjectsDataSource>()
+      .read<ProjectsRepository>()
       .create(request)
       .then<Response>((project) => CreatedResponse(project.toJson()))
       .onError(

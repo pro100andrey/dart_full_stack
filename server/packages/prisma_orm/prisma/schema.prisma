@@ -6,7 +6,7 @@
 
 generator client {
   provider = "dart run orm"
-  output   = "../lib/src/generated/prisma_client"
+  output   = "../lib/src/"
 }
 
 datasource db {
@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model UserEntity {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
@@ -22,7 +22,7 @@ model User {
   updatedAt DateTime @updatedAt
 }
 
-model Project {
+model ProjectEntity {
   id    Int     @id @default(autoincrement())
   name String
   description  String?

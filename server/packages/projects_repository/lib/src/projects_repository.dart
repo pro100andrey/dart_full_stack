@@ -1,6 +1,6 @@
-import '../projects_data_source.dart';
+import 'package:models/models.dart';
 
-abstract class ProjectsDataSource {
+abstract class ProjectsRepository {
   Future<Project> create(CreateProjectRequest request);
   Future<ProjectsResponse> read(ProjectsRequest request);
 }

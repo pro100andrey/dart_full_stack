@@ -416,8 +416,9 @@ class DateTimeFilter implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class UserWhereInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserWhereInput({
+class UserEntityWhereInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const UserEntityWhereInput({
     this.AND,
     this.OR,
     this.NOT,
@@ -428,11 +429,13 @@ class UserWhereInput implements _i1.JsonConvertible<Map<String, dynamic>> {
     this.updatedAt,
   });
 
-  final _i1.PrismaUnion<_i2.UserWhereInput, Iterable<_i2.UserWhereInput>>? AND;
+  final _i1.PrismaUnion<_i2.UserEntityWhereInput,
+      Iterable<_i2.UserEntityWhereInput>>? AND;
 
-  final Iterable<_i2.UserWhereInput>? OR;
+  final Iterable<_i2.UserEntityWhereInput>? OR;
 
-  final _i1.PrismaUnion<_i2.UserWhereInput, Iterable<_i2.UserWhereInput>>? NOT;
+  final _i1.PrismaUnion<_i2.UserEntityWhereInput,
+      Iterable<_i2.UserEntityWhereInput>>? NOT;
 
   final _i1.PrismaUnion<_i2.IntFilter, int>? id;
 
@@ -458,9 +461,9 @@ class UserWhereInput implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class UserWhereUniqueInput
+class UserEntityWhereUniqueInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserWhereUniqueInput({
+  const UserEntityWhereUniqueInput({
     this.id,
     this.email,
     this.AND,
@@ -475,11 +478,13 @@ class UserWhereUniqueInput
 
   final String? email;
 
-  final _i1.PrismaUnion<_i2.UserWhereInput, Iterable<_i2.UserWhereInput>>? AND;
+  final _i1.PrismaUnion<_i2.UserEntityWhereInput,
+      Iterable<_i2.UserEntityWhereInput>>? AND;
 
-  final Iterable<_i2.UserWhereInput>? OR;
+  final Iterable<_i2.UserEntityWhereInput>? OR;
 
-  final _i1.PrismaUnion<_i2.UserWhereInput, Iterable<_i2.UserWhereInput>>? NOT;
+  final _i1.PrismaUnion<_i2.UserEntityWhereInput,
+      Iterable<_i2.UserEntityWhereInput>>? NOT;
 
   final _i1.PrismaUnion<_i2.StringNullableFilter,
       _i1.PrismaUnion<String, _i1.PrismaNull>>? name;
@@ -501,8 +506,8 @@ class UserWhereUniqueInput
       };
 }
 
-class UserSelect implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserSelect({
+class UserEntitySelect implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const UserEntitySelect({
     this.id,
     this.email,
     this.name,
@@ -567,9 +572,9 @@ class SortOrderInput implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class UserOrderByWithRelationInput
+class UserEntityOrderByWithRelationInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserOrderByWithRelationInput({
+  const UserEntityOrderByWithRelationInput({
     this.id,
     this.email,
     this.name,
@@ -597,14 +602,14 @@ class UserOrderByWithRelationInput
       };
 }
 
-enum UserScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
-  id<int>('id', 'User'),
-  email<String>('email', 'User'),
-  name$<String>('name', 'User'),
-  createdAt<DateTime>('createdAt', 'User'),
-  updatedAt<DateTime>('updatedAt', 'User');
+enum UserEntityScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
+  id<int>('id', 'UserEntity'),
+  email<String>('email', 'UserEntity'),
+  name$<String>('name', 'UserEntity'),
+  createdAt<DateTime>('createdAt', 'UserEntity'),
+  updatedAt<DateTime>('updatedAt', 'UserEntity');
 
-  const UserScalar(
+  const UserEntityScalar(
     this.name,
     this.model,
   );
@@ -616,8 +621,9 @@ enum UserScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
   final String model;
 }
 
-class UserCreateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserCreateInput({
+class UserEntityCreateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const UserEntityCreateInput({
     required this.email,
     this.name,
     this.createdAt,
@@ -641,9 +647,9 @@ class UserCreateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class UserUncheckedCreateInput
+class UserEntityUncheckedCreateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserUncheckedCreateInput({
+  const UserEntityUncheckedCreateInput({
     this.id,
     required this.email,
     this.name,
@@ -682,8 +688,9 @@ class AffectedRowsOutput {
   Map<String, dynamic> toJson() => {'count': count};
 }
 
-class UserCreateManyInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserCreateManyInput({
+class UserEntityCreateManyInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const UserEntityCreateManyInput({
     this.id,
     required this.email,
     this.name,
@@ -741,8 +748,9 @@ class DateTimeFieldUpdateOperationsInput
   Map<String, dynamic> toJson() => {'set': set};
 }
 
-class UserUpdateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserUpdateInput({
+class UserEntityUpdateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const UserEntityUpdateInput({
     this.email,
     this.name,
     this.createdAt,
@@ -801,9 +809,9 @@ class IntFieldUpdateOperationsInput
       };
 }
 
-class UserUncheckedUpdateInput
+class UserEntityUncheckedUpdateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserUncheckedUpdateInput({
+  const UserEntityUncheckedUpdateInput({
     this.id,
     this.email,
     this.name,
@@ -836,9 +844,9 @@ class UserUncheckedUpdateInput
       };
 }
 
-class UserUpdateManyMutationInput
+class UserEntityUpdateManyMutationInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserUpdateManyMutationInput({
+  const UserEntityUpdateManyMutationInput({
     this.email,
     this.name,
     this.createdAt,
@@ -867,9 +875,9 @@ class UserUpdateManyMutationInput
       };
 }
 
-class UserUncheckedUpdateManyInput
+class UserEntityUncheckedUpdateManyInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserUncheckedUpdateManyInput({
+  const UserEntityUncheckedUpdateManyInput({
     this.id,
     this.email,
     this.name,
@@ -902,8 +910,8 @@ class UserUncheckedUpdateManyInput
       };
 }
 
-class UserCountAggregateOutputType {
-  const UserCountAggregateOutputType({
+class UserEntityCountAggregateOutputType {
+  const UserEntityCountAggregateOutputType({
     this.id,
     this.email,
     this.name,
@@ -912,8 +920,8 @@ class UserCountAggregateOutputType {
     this.$all,
   });
 
-  factory UserCountAggregateOutputType.fromJson(Map json) =>
-      UserCountAggregateOutputType(
+  factory UserEntityCountAggregateOutputType.fromJson(Map json) =>
+      UserEntityCountAggregateOutputType(
         id: json['id'],
         email: json['email'],
         name: json['name'],
@@ -944,30 +952,30 @@ class UserCountAggregateOutputType {
       };
 }
 
-class UserAvgAggregateOutputType {
-  const UserAvgAggregateOutputType({this.id});
+class UserEntityAvgAggregateOutputType {
+  const UserEntityAvgAggregateOutputType({this.id});
 
-  factory UserAvgAggregateOutputType.fromJson(Map json) =>
-      UserAvgAggregateOutputType(id: json['id']);
+  factory UserEntityAvgAggregateOutputType.fromJson(Map json) =>
+      UserEntityAvgAggregateOutputType(id: json['id']);
 
   final double? id;
 
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class UserSumAggregateOutputType {
-  const UserSumAggregateOutputType({this.id});
+class UserEntitySumAggregateOutputType {
+  const UserEntitySumAggregateOutputType({this.id});
 
-  factory UserSumAggregateOutputType.fromJson(Map json) =>
-      UserSumAggregateOutputType(id: json['id']);
+  factory UserEntitySumAggregateOutputType.fromJson(Map json) =>
+      UserEntitySumAggregateOutputType(id: json['id']);
 
   final int? id;
 
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class UserMinAggregateOutputType {
-  const UserMinAggregateOutputType({
+class UserEntityMinAggregateOutputType {
+  const UserEntityMinAggregateOutputType({
     this.id,
     this.email,
     this.name,
@@ -975,8 +983,8 @@ class UserMinAggregateOutputType {
     this.updatedAt,
   });
 
-  factory UserMinAggregateOutputType.fromJson(Map json) =>
-      UserMinAggregateOutputType(
+  factory UserEntityMinAggregateOutputType.fromJson(Map json) =>
+      UserEntityMinAggregateOutputType(
         id: json['id'],
         email: json['email'],
         name: json['name'],
@@ -1003,8 +1011,8 @@ class UserMinAggregateOutputType {
       };
 }
 
-class UserMaxAggregateOutputType {
-  const UserMaxAggregateOutputType({
+class UserEntityMaxAggregateOutputType {
+  const UserEntityMaxAggregateOutputType({
     this.id,
     this.email,
     this.name,
@@ -1012,8 +1020,8 @@ class UserMaxAggregateOutputType {
     this.updatedAt,
   });
 
-  factory UserMaxAggregateOutputType.fromJson(Map json) =>
-      UserMaxAggregateOutputType(
+  factory UserEntityMaxAggregateOutputType.fromJson(Map json) =>
+      UserEntityMaxAggregateOutputType(
         id: json['id'],
         email: json['email'],
         name: json['name'],
@@ -1040,8 +1048,8 @@ class UserMaxAggregateOutputType {
       };
 }
 
-class UserGroupByOutputType {
-  const UserGroupByOutputType({
+class UserEntityGroupByOutputType {
+  const UserEntityGroupByOutputType({
     this.id,
     this.email,
     this.name,
@@ -1054,26 +1062,27 @@ class UserGroupByOutputType {
     this.$max,
   });
 
-  factory UserGroupByOutputType.fromJson(Map json) => UserGroupByOutputType(
+  factory UserEntityGroupByOutputType.fromJson(Map json) =>
+      UserEntityGroupByOutputType(
         id: json['id'],
         email: json['email'],
         name: json['name'],
         createdAt: json['createdAt'],
         updatedAt: json['updatedAt'],
         $count: json['_count'] is Map
-            ? _i2.UserCountAggregateOutputType.fromJson(json['_count'])
+            ? _i2.UserEntityCountAggregateOutputType.fromJson(json['_count'])
             : null,
         $avg: json['_avg'] is Map
-            ? _i2.UserAvgAggregateOutputType.fromJson(json['_avg'])
+            ? _i2.UserEntityAvgAggregateOutputType.fromJson(json['_avg'])
             : null,
         $sum: json['_sum'] is Map
-            ? _i2.UserSumAggregateOutputType.fromJson(json['_sum'])
+            ? _i2.UserEntitySumAggregateOutputType.fromJson(json['_sum'])
             : null,
         $min: json['_min'] is Map
-            ? _i2.UserMinAggregateOutputType.fromJson(json['_min'])
+            ? _i2.UserEntityMinAggregateOutputType.fromJson(json['_min'])
             : null,
         $max: json['_max'] is Map
-            ? _i2.UserMaxAggregateOutputType.fromJson(json['_max'])
+            ? _i2.UserEntityMaxAggregateOutputType.fromJson(json['_max'])
             : null,
       );
 
@@ -1087,15 +1096,15 @@ class UserGroupByOutputType {
 
   final DateTime? updatedAt;
 
-  final _i2.UserCountAggregateOutputType? $count;
+  final _i2.UserEntityCountAggregateOutputType? $count;
 
-  final _i2.UserAvgAggregateOutputType? $avg;
+  final _i2.UserEntityAvgAggregateOutputType? $avg;
 
-  final _i2.UserSumAggregateOutputType? $sum;
+  final _i2.UserEntitySumAggregateOutputType? $sum;
 
-  final _i2.UserMinAggregateOutputType? $min;
+  final _i2.UserEntityMinAggregateOutputType? $min;
 
-  final _i2.UserMaxAggregateOutputType? $max;
+  final _i2.UserEntityMaxAggregateOutputType? $max;
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -1111,9 +1120,9 @@ class UserGroupByOutputType {
       };
 }
 
-class UserCountOrderByAggregateInput
+class UserEntityCountOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserCountOrderByAggregateInput({
+  const UserEntityCountOrderByAggregateInput({
     this.id,
     this.email,
     this.name,
@@ -1141,9 +1150,9 @@ class UserCountOrderByAggregateInput
       };
 }
 
-class UserAvgOrderByAggregateInput
+class UserEntityAvgOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserAvgOrderByAggregateInput({this.id});
+  const UserEntityAvgOrderByAggregateInput({this.id});
 
   final _i2.SortOrder? id;
 
@@ -1151,9 +1160,9 @@ class UserAvgOrderByAggregateInput
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class UserMaxOrderByAggregateInput
+class UserEntityMaxOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserMaxOrderByAggregateInput({
+  const UserEntityMaxOrderByAggregateInput({
     this.id,
     this.email,
     this.name,
@@ -1181,9 +1190,9 @@ class UserMaxOrderByAggregateInput
       };
 }
 
-class UserMinOrderByAggregateInput
+class UserEntityMinOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserMinOrderByAggregateInput({
+  const UserEntityMinOrderByAggregateInput({
     this.id,
     this.email,
     this.name,
@@ -1211,9 +1220,9 @@ class UserMinOrderByAggregateInput
       };
 }
 
-class UserSumOrderByAggregateInput
+class UserEntitySumOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserSumOrderByAggregateInput({this.id});
+  const UserEntitySumOrderByAggregateInput({this.id});
 
   final _i2.SortOrder? id;
 
@@ -1221,9 +1230,9 @@ class UserSumOrderByAggregateInput
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class UserOrderByWithAggregationInput
+class UserEntityOrderByWithAggregationInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserOrderByWithAggregationInput({
+  const UserEntityOrderByWithAggregationInput({
     this.id,
     this.email,
     this.name,
@@ -1246,15 +1255,15 @@ class UserOrderByWithAggregationInput
 
   final _i2.SortOrder? updatedAt;
 
-  final _i2.UserCountOrderByAggregateInput? $count;
+  final _i2.UserEntityCountOrderByAggregateInput? $count;
 
-  final _i2.UserAvgOrderByAggregateInput? $avg;
+  final _i2.UserEntityAvgOrderByAggregateInput? $avg;
 
-  final _i2.UserMaxOrderByAggregateInput? $max;
+  final _i2.UserEntityMaxOrderByAggregateInput? $max;
 
-  final _i2.UserMinOrderByAggregateInput? $min;
+  final _i2.UserEntityMinOrderByAggregateInput? $min;
 
-  final _i2.UserSumOrderByAggregateInput? $sum;
+  final _i2.UserEntitySumOrderByAggregateInput? $sum;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1882,9 +1891,9 @@ class DateTimeWithAggregatesFilter
       };
 }
 
-class UserScalarWhereWithAggregatesInput
+class UserEntityScalarWhereWithAggregatesInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserScalarWhereWithAggregatesInput({
+  const UserEntityScalarWhereWithAggregatesInput({
     this.AND,
     this.OR,
     this.NOT,
@@ -1895,13 +1904,13 @@ class UserScalarWhereWithAggregatesInput
     this.updatedAt,
   });
 
-  final _i1.PrismaUnion<_i2.UserScalarWhereWithAggregatesInput,
-      Iterable<_i2.UserScalarWhereWithAggregatesInput>>? AND;
+  final _i1.PrismaUnion<_i2.UserEntityScalarWhereWithAggregatesInput,
+      Iterable<_i2.UserEntityScalarWhereWithAggregatesInput>>? AND;
 
-  final Iterable<_i2.UserScalarWhereWithAggregatesInput>? OR;
+  final Iterable<_i2.UserEntityScalarWhereWithAggregatesInput>? OR;
 
-  final _i1.PrismaUnion<_i2.UserScalarWhereWithAggregatesInput,
-      Iterable<_i2.UserScalarWhereWithAggregatesInput>>? NOT;
+  final _i1.PrismaUnion<_i2.UserEntityScalarWhereWithAggregatesInput,
+      Iterable<_i2.UserEntityScalarWhereWithAggregatesInput>>? NOT;
 
   final _i1.PrismaUnion<_i2.IntWithAggregatesFilter, int>? id;
 
@@ -1927,9 +1936,9 @@ class UserScalarWhereWithAggregatesInput
       };
 }
 
-class UserCountAggregateOutputTypeSelect
+class UserEntityCountAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserCountAggregateOutputTypeSelect({
+  const UserEntityCountAggregateOutputTypeSelect({
     this.id,
     this.email,
     this.name,
@@ -1961,19 +1970,19 @@ class UserCountAggregateOutputTypeSelect
       };
 }
 
-class UserGroupByOutputTypeCountArgs
+class UserEntityGroupByOutputTypeCountArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserGroupByOutputTypeCountArgs({this.select});
+  const UserEntityGroupByOutputTypeCountArgs({this.select});
 
-  final _i2.UserCountAggregateOutputTypeSelect? select;
+  final _i2.UserEntityCountAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class UserAvgAggregateOutputTypeSelect
+class UserEntityAvgAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserAvgAggregateOutputTypeSelect({this.id});
+  const UserEntityAvgAggregateOutputTypeSelect({this.id});
 
   final bool? id;
 
@@ -1981,19 +1990,19 @@ class UserAvgAggregateOutputTypeSelect
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class UserGroupByOutputTypeAvgArgs
+class UserEntityGroupByOutputTypeAvgArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserGroupByOutputTypeAvgArgs({this.select});
+  const UserEntityGroupByOutputTypeAvgArgs({this.select});
 
-  final _i2.UserAvgAggregateOutputTypeSelect? select;
+  final _i2.UserEntityAvgAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class UserSumAggregateOutputTypeSelect
+class UserEntitySumAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserSumAggregateOutputTypeSelect({this.id});
+  const UserEntitySumAggregateOutputTypeSelect({this.id});
 
   final bool? id;
 
@@ -2001,19 +2010,19 @@ class UserSumAggregateOutputTypeSelect
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class UserGroupByOutputTypeSumArgs
+class UserEntityGroupByOutputTypeSumArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserGroupByOutputTypeSumArgs({this.select});
+  const UserEntityGroupByOutputTypeSumArgs({this.select});
 
-  final _i2.UserSumAggregateOutputTypeSelect? select;
+  final _i2.UserEntitySumAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class UserMinAggregateOutputTypeSelect
+class UserEntityMinAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserMinAggregateOutputTypeSelect({
+  const UserEntityMinAggregateOutputTypeSelect({
     this.id,
     this.email,
     this.name,
@@ -2041,19 +2050,19 @@ class UserMinAggregateOutputTypeSelect
       };
 }
 
-class UserGroupByOutputTypeMinArgs
+class UserEntityGroupByOutputTypeMinArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserGroupByOutputTypeMinArgs({this.select});
+  const UserEntityGroupByOutputTypeMinArgs({this.select});
 
-  final _i2.UserMinAggregateOutputTypeSelect? select;
+  final _i2.UserEntityMinAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class UserMaxAggregateOutputTypeSelect
+class UserEntityMaxAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserMaxAggregateOutputTypeSelect({
+  const UserEntityMaxAggregateOutputTypeSelect({
     this.id,
     this.email,
     this.name,
@@ -2081,19 +2090,19 @@ class UserMaxAggregateOutputTypeSelect
       };
 }
 
-class UserGroupByOutputTypeMaxArgs
+class UserEntityGroupByOutputTypeMaxArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserGroupByOutputTypeMaxArgs({this.select});
+  const UserEntityGroupByOutputTypeMaxArgs({this.select});
 
-  final _i2.UserMaxAggregateOutputTypeSelect? select;
+  final _i2.UserEntityMaxAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class UserGroupByOutputTypeSelect
+class UserEntityGroupByOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const UserGroupByOutputTypeSelect({
+  const UserEntityGroupByOutputTypeSelect({
     this.id,
     this.email,
     this.name,
@@ -2116,15 +2125,15 @@ class UserGroupByOutputTypeSelect
 
   final bool? updatedAt;
 
-  final _i1.PrismaUnion<bool, _i2.UserGroupByOutputTypeCountArgs>? $count;
+  final _i1.PrismaUnion<bool, _i2.UserEntityGroupByOutputTypeCountArgs>? $count;
 
-  final _i1.PrismaUnion<bool, _i2.UserGroupByOutputTypeAvgArgs>? $avg;
+  final _i1.PrismaUnion<bool, _i2.UserEntityGroupByOutputTypeAvgArgs>? $avg;
 
-  final _i1.PrismaUnion<bool, _i2.UserGroupByOutputTypeSumArgs>? $sum;
+  final _i1.PrismaUnion<bool, _i2.UserEntityGroupByOutputTypeSumArgs>? $sum;
 
-  final _i1.PrismaUnion<bool, _i2.UserGroupByOutputTypeMinArgs>? $min;
+  final _i1.PrismaUnion<bool, _i2.UserEntityGroupByOutputTypeMinArgs>? $min;
 
-  final _i1.PrismaUnion<bool, _i2.UserGroupByOutputTypeMaxArgs>? $max;
+  final _i1.PrismaUnion<bool, _i2.UserEntityGroupByOutputTypeMaxArgs>? $max;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2141,8 +2150,8 @@ class UserGroupByOutputTypeSelect
       };
 }
 
-class AggregateUser {
-  const AggregateUser({
+class AggregateUserEntity {
+  const AggregateUserEntity({
     this.$count,
     this.$avg,
     this.$sum,
@@ -2150,33 +2159,33 @@ class AggregateUser {
     this.$max,
   });
 
-  factory AggregateUser.fromJson(Map json) => AggregateUser(
+  factory AggregateUserEntity.fromJson(Map json) => AggregateUserEntity(
         $count: json['_count'] is Map
-            ? _i2.UserCountAggregateOutputType.fromJson(json['_count'])
+            ? _i2.UserEntityCountAggregateOutputType.fromJson(json['_count'])
             : null,
         $avg: json['_avg'] is Map
-            ? _i2.UserAvgAggregateOutputType.fromJson(json['_avg'])
+            ? _i2.UserEntityAvgAggregateOutputType.fromJson(json['_avg'])
             : null,
         $sum: json['_sum'] is Map
-            ? _i2.UserSumAggregateOutputType.fromJson(json['_sum'])
+            ? _i2.UserEntitySumAggregateOutputType.fromJson(json['_sum'])
             : null,
         $min: json['_min'] is Map
-            ? _i2.UserMinAggregateOutputType.fromJson(json['_min'])
+            ? _i2.UserEntityMinAggregateOutputType.fromJson(json['_min'])
             : null,
         $max: json['_max'] is Map
-            ? _i2.UserMaxAggregateOutputType.fromJson(json['_max'])
+            ? _i2.UserEntityMaxAggregateOutputType.fromJson(json['_max'])
             : null,
       );
 
-  final _i2.UserCountAggregateOutputType? $count;
+  final _i2.UserEntityCountAggregateOutputType? $count;
 
-  final _i2.UserAvgAggregateOutputType? $avg;
+  final _i2.UserEntityAvgAggregateOutputType? $avg;
 
-  final _i2.UserSumAggregateOutputType? $sum;
+  final _i2.UserEntitySumAggregateOutputType? $sum;
 
-  final _i2.UserMinAggregateOutputType? $min;
+  final _i2.UserEntityMinAggregateOutputType? $min;
 
-  final _i2.UserMaxAggregateOutputType? $max;
+  final _i2.UserEntityMaxAggregateOutputType? $max;
 
   Map<String, dynamic> toJson() => {
         '_count': $count?.toJson(),
@@ -2187,58 +2196,59 @@ class AggregateUser {
       };
 }
 
-class AggregateUserCountArgs
+class AggregateUserEntityCountArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateUserCountArgs({this.select});
+  const AggregateUserEntityCountArgs({this.select});
 
-  final _i2.UserCountAggregateOutputTypeSelect? select;
+  final _i2.UserEntityCountAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateUserAvgArgs
+class AggregateUserEntityAvgArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateUserAvgArgs({this.select});
+  const AggregateUserEntityAvgArgs({this.select});
 
-  final _i2.UserAvgAggregateOutputTypeSelect? select;
+  final _i2.UserEntityAvgAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateUserSumArgs
+class AggregateUserEntitySumArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateUserSumArgs({this.select});
+  const AggregateUserEntitySumArgs({this.select});
 
-  final _i2.UserSumAggregateOutputTypeSelect? select;
+  final _i2.UserEntitySumAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateUserMinArgs
+class AggregateUserEntityMinArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateUserMinArgs({this.select});
+  const AggregateUserEntityMinArgs({this.select});
 
-  final _i2.UserMinAggregateOutputTypeSelect? select;
+  final _i2.UserEntityMinAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateUserMaxArgs
+class AggregateUserEntityMaxArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateUserMaxArgs({this.select});
+  const AggregateUserEntityMaxArgs({this.select});
 
-  final _i2.UserMaxAggregateOutputTypeSelect? select;
+  final _i2.UserEntityMaxAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateUserSelect implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateUserSelect({
+class AggregateUserEntitySelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateUserEntitySelect({
     this.$count,
     this.$avg,
     this.$sum,
@@ -2246,15 +2256,15 @@ class AggregateUserSelect implements _i1.JsonConvertible<Map<String, dynamic>> {
     this.$max,
   });
 
-  final _i1.PrismaUnion<bool, _i2.AggregateUserCountArgs>? $count;
+  final _i1.PrismaUnion<bool, _i2.AggregateUserEntityCountArgs>? $count;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateUserAvgArgs>? $avg;
+  final _i1.PrismaUnion<bool, _i2.AggregateUserEntityAvgArgs>? $avg;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateUserSumArgs>? $sum;
+  final _i1.PrismaUnion<bool, _i2.AggregateUserEntitySumArgs>? $sum;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateUserMinArgs>? $min;
+  final _i1.PrismaUnion<bool, _i2.AggregateUserEntityMinArgs>? $min;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateUserMaxArgs>? $max;
+  final _i1.PrismaUnion<bool, _i2.AggregateUserEntityMaxArgs>? $max;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2266,8 +2276,9 @@ class AggregateUserSelect implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class ProjectWhereInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectWhereInput({
+class ProjectEntityWhereInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ProjectEntityWhereInput({
     this.AND,
     this.OR,
     this.NOT,
@@ -2278,13 +2289,13 @@ class ProjectWhereInput implements _i1.JsonConvertible<Map<String, dynamic>> {
     this.updatedAt,
   });
 
-  final _i1.PrismaUnion<_i2.ProjectWhereInput, Iterable<_i2.ProjectWhereInput>>?
-      AND;
+  final _i1.PrismaUnion<_i2.ProjectEntityWhereInput,
+      Iterable<_i2.ProjectEntityWhereInput>>? AND;
 
-  final Iterable<_i2.ProjectWhereInput>? OR;
+  final Iterable<_i2.ProjectEntityWhereInput>? OR;
 
-  final _i1.PrismaUnion<_i2.ProjectWhereInput, Iterable<_i2.ProjectWhereInput>>?
-      NOT;
+  final _i1.PrismaUnion<_i2.ProjectEntityWhereInput,
+      Iterable<_i2.ProjectEntityWhereInput>>? NOT;
 
   final _i1.PrismaUnion<_i2.IntFilter, int>? id;
 
@@ -2310,9 +2321,9 @@ class ProjectWhereInput implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class ProjectWhereUniqueInput
+class ProjectEntityWhereUniqueInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectWhereUniqueInput({
+  const ProjectEntityWhereUniqueInput({
     this.id,
     this.AND,
     this.OR,
@@ -2325,13 +2336,13 @@ class ProjectWhereUniqueInput
 
   final int? id;
 
-  final _i1.PrismaUnion<_i2.ProjectWhereInput, Iterable<_i2.ProjectWhereInput>>?
-      AND;
+  final _i1.PrismaUnion<_i2.ProjectEntityWhereInput,
+      Iterable<_i2.ProjectEntityWhereInput>>? AND;
 
-  final Iterable<_i2.ProjectWhereInput>? OR;
+  final Iterable<_i2.ProjectEntityWhereInput>? OR;
 
-  final _i1.PrismaUnion<_i2.ProjectWhereInput, Iterable<_i2.ProjectWhereInput>>?
-      NOT;
+  final _i1.PrismaUnion<_i2.ProjectEntityWhereInput,
+      Iterable<_i2.ProjectEntityWhereInput>>? NOT;
 
   final _i1.PrismaUnion<_i2.StringFilter, String>? name;
 
@@ -2355,8 +2366,8 @@ class ProjectWhereUniqueInput
       };
 }
 
-class ProjectSelect implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectSelect({
+class ProjectEntitySelect implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ProjectEntitySelect({
     this.id,
     this.name,
     this.description,
@@ -2384,9 +2395,9 @@ class ProjectSelect implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class ProjectOrderByWithRelationInput
+class ProjectEntityOrderByWithRelationInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectOrderByWithRelationInput({
+  const ProjectEntityOrderByWithRelationInput({
     this.id,
     this.name,
     this.description,
@@ -2414,14 +2425,14 @@ class ProjectOrderByWithRelationInput
       };
 }
 
-enum ProjectScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
-  id<int>('id', 'Project'),
-  name$<String>('name', 'Project'),
-  description<String>('description', 'Project'),
-  createdAt<DateTime>('createdAt', 'Project'),
-  updatedAt<DateTime>('updatedAt', 'Project');
+enum ProjectEntityScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
+  id<int>('id', 'ProjectEntity'),
+  name$<String>('name', 'ProjectEntity'),
+  description<String>('description', 'ProjectEntity'),
+  createdAt<DateTime>('createdAt', 'ProjectEntity'),
+  updatedAt<DateTime>('updatedAt', 'ProjectEntity');
 
-  const ProjectScalar(
+  const ProjectEntityScalar(
     this.name,
     this.model,
   );
@@ -2433,8 +2444,9 @@ enum ProjectScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
   final String model;
 }
 
-class ProjectCreateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectCreateInput({
+class ProjectEntityCreateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ProjectEntityCreateInput({
     required this.name,
     this.description,
     this.createdAt,
@@ -2458,9 +2470,9 @@ class ProjectCreateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class ProjectUncheckedCreateInput
+class ProjectEntityUncheckedCreateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectUncheckedCreateInput({
+  const ProjectEntityUncheckedCreateInput({
     this.id,
     required this.name,
     this.description,
@@ -2488,9 +2500,9 @@ class ProjectUncheckedCreateInput
       };
 }
 
-class ProjectCreateManyInput
+class ProjectEntityCreateManyInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectCreateManyInput({
+  const ProjectEntityCreateManyInput({
     this.id,
     required this.name,
     this.description,
@@ -2518,8 +2530,9 @@ class ProjectCreateManyInput
       };
 }
 
-class ProjectUpdateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectUpdateInput({
+class ProjectEntityUpdateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ProjectEntityUpdateInput({
     this.name,
     this.description,
     this.createdAt,
@@ -2548,9 +2561,9 @@ class ProjectUpdateInput implements _i1.JsonConvertible<Map<String, dynamic>> {
       };
 }
 
-class ProjectUncheckedUpdateInput
+class ProjectEntityUncheckedUpdateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectUncheckedUpdateInput({
+  const ProjectEntityUncheckedUpdateInput({
     this.id,
     this.name,
     this.description,
@@ -2583,9 +2596,9 @@ class ProjectUncheckedUpdateInput
       };
 }
 
-class ProjectUpdateManyMutationInput
+class ProjectEntityUpdateManyMutationInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectUpdateManyMutationInput({
+  const ProjectEntityUpdateManyMutationInput({
     this.name,
     this.description,
     this.createdAt,
@@ -2614,9 +2627,9 @@ class ProjectUpdateManyMutationInput
       };
 }
 
-class ProjectUncheckedUpdateManyInput
+class ProjectEntityUncheckedUpdateManyInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectUncheckedUpdateManyInput({
+  const ProjectEntityUncheckedUpdateManyInput({
     this.id,
     this.name,
     this.description,
@@ -2649,8 +2662,8 @@ class ProjectUncheckedUpdateManyInput
       };
 }
 
-class ProjectCountAggregateOutputType {
-  const ProjectCountAggregateOutputType({
+class ProjectEntityCountAggregateOutputType {
+  const ProjectEntityCountAggregateOutputType({
     this.id,
     this.name,
     this.description,
@@ -2659,8 +2672,8 @@ class ProjectCountAggregateOutputType {
     this.$all,
   });
 
-  factory ProjectCountAggregateOutputType.fromJson(Map json) =>
-      ProjectCountAggregateOutputType(
+  factory ProjectEntityCountAggregateOutputType.fromJson(Map json) =>
+      ProjectEntityCountAggregateOutputType(
         id: json['id'],
         name: json['name'],
         description: json['description'],
@@ -2691,30 +2704,30 @@ class ProjectCountAggregateOutputType {
       };
 }
 
-class ProjectAvgAggregateOutputType {
-  const ProjectAvgAggregateOutputType({this.id});
+class ProjectEntityAvgAggregateOutputType {
+  const ProjectEntityAvgAggregateOutputType({this.id});
 
-  factory ProjectAvgAggregateOutputType.fromJson(Map json) =>
-      ProjectAvgAggregateOutputType(id: json['id']);
+  factory ProjectEntityAvgAggregateOutputType.fromJson(Map json) =>
+      ProjectEntityAvgAggregateOutputType(id: json['id']);
 
   final double? id;
 
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class ProjectSumAggregateOutputType {
-  const ProjectSumAggregateOutputType({this.id});
+class ProjectEntitySumAggregateOutputType {
+  const ProjectEntitySumAggregateOutputType({this.id});
 
-  factory ProjectSumAggregateOutputType.fromJson(Map json) =>
-      ProjectSumAggregateOutputType(id: json['id']);
+  factory ProjectEntitySumAggregateOutputType.fromJson(Map json) =>
+      ProjectEntitySumAggregateOutputType(id: json['id']);
 
   final int? id;
 
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class ProjectMinAggregateOutputType {
-  const ProjectMinAggregateOutputType({
+class ProjectEntityMinAggregateOutputType {
+  const ProjectEntityMinAggregateOutputType({
     this.id,
     this.name,
     this.description,
@@ -2722,8 +2735,8 @@ class ProjectMinAggregateOutputType {
     this.updatedAt,
   });
 
-  factory ProjectMinAggregateOutputType.fromJson(Map json) =>
-      ProjectMinAggregateOutputType(
+  factory ProjectEntityMinAggregateOutputType.fromJson(Map json) =>
+      ProjectEntityMinAggregateOutputType(
         id: json['id'],
         name: json['name'],
         description: json['description'],
@@ -2750,8 +2763,8 @@ class ProjectMinAggregateOutputType {
       };
 }
 
-class ProjectMaxAggregateOutputType {
-  const ProjectMaxAggregateOutputType({
+class ProjectEntityMaxAggregateOutputType {
+  const ProjectEntityMaxAggregateOutputType({
     this.id,
     this.name,
     this.description,
@@ -2759,8 +2772,8 @@ class ProjectMaxAggregateOutputType {
     this.updatedAt,
   });
 
-  factory ProjectMaxAggregateOutputType.fromJson(Map json) =>
-      ProjectMaxAggregateOutputType(
+  factory ProjectEntityMaxAggregateOutputType.fromJson(Map json) =>
+      ProjectEntityMaxAggregateOutputType(
         id: json['id'],
         name: json['name'],
         description: json['description'],
@@ -2787,8 +2800,8 @@ class ProjectMaxAggregateOutputType {
       };
 }
 
-class ProjectGroupByOutputType {
-  const ProjectGroupByOutputType({
+class ProjectEntityGroupByOutputType {
+  const ProjectEntityGroupByOutputType({
     this.id,
     this.name,
     this.description,
@@ -2801,27 +2814,27 @@ class ProjectGroupByOutputType {
     this.$max,
   });
 
-  factory ProjectGroupByOutputType.fromJson(Map json) =>
-      ProjectGroupByOutputType(
+  factory ProjectEntityGroupByOutputType.fromJson(Map json) =>
+      ProjectEntityGroupByOutputType(
         id: json['id'],
         name: json['name'],
         description: json['description'],
         createdAt: json['createdAt'],
         updatedAt: json['updatedAt'],
         $count: json['_count'] is Map
-            ? _i2.ProjectCountAggregateOutputType.fromJson(json['_count'])
+            ? _i2.ProjectEntityCountAggregateOutputType.fromJson(json['_count'])
             : null,
         $avg: json['_avg'] is Map
-            ? _i2.ProjectAvgAggregateOutputType.fromJson(json['_avg'])
+            ? _i2.ProjectEntityAvgAggregateOutputType.fromJson(json['_avg'])
             : null,
         $sum: json['_sum'] is Map
-            ? _i2.ProjectSumAggregateOutputType.fromJson(json['_sum'])
+            ? _i2.ProjectEntitySumAggregateOutputType.fromJson(json['_sum'])
             : null,
         $min: json['_min'] is Map
-            ? _i2.ProjectMinAggregateOutputType.fromJson(json['_min'])
+            ? _i2.ProjectEntityMinAggregateOutputType.fromJson(json['_min'])
             : null,
         $max: json['_max'] is Map
-            ? _i2.ProjectMaxAggregateOutputType.fromJson(json['_max'])
+            ? _i2.ProjectEntityMaxAggregateOutputType.fromJson(json['_max'])
             : null,
       );
 
@@ -2835,15 +2848,15 @@ class ProjectGroupByOutputType {
 
   final DateTime? updatedAt;
 
-  final _i2.ProjectCountAggregateOutputType? $count;
+  final _i2.ProjectEntityCountAggregateOutputType? $count;
 
-  final _i2.ProjectAvgAggregateOutputType? $avg;
+  final _i2.ProjectEntityAvgAggregateOutputType? $avg;
 
-  final _i2.ProjectSumAggregateOutputType? $sum;
+  final _i2.ProjectEntitySumAggregateOutputType? $sum;
 
-  final _i2.ProjectMinAggregateOutputType? $min;
+  final _i2.ProjectEntityMinAggregateOutputType? $min;
 
-  final _i2.ProjectMaxAggregateOutputType? $max;
+  final _i2.ProjectEntityMaxAggregateOutputType? $max;
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -2859,9 +2872,9 @@ class ProjectGroupByOutputType {
       };
 }
 
-class ProjectCountOrderByAggregateInput
+class ProjectEntityCountOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectCountOrderByAggregateInput({
+  const ProjectEntityCountOrderByAggregateInput({
     this.id,
     this.name,
     this.description,
@@ -2889,9 +2902,9 @@ class ProjectCountOrderByAggregateInput
       };
 }
 
-class ProjectAvgOrderByAggregateInput
+class ProjectEntityAvgOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectAvgOrderByAggregateInput({this.id});
+  const ProjectEntityAvgOrderByAggregateInput({this.id});
 
   final _i2.SortOrder? id;
 
@@ -2899,9 +2912,9 @@ class ProjectAvgOrderByAggregateInput
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class ProjectMaxOrderByAggregateInput
+class ProjectEntityMaxOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectMaxOrderByAggregateInput({
+  const ProjectEntityMaxOrderByAggregateInput({
     this.id,
     this.name,
     this.description,
@@ -2929,9 +2942,9 @@ class ProjectMaxOrderByAggregateInput
       };
 }
 
-class ProjectMinOrderByAggregateInput
+class ProjectEntityMinOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectMinOrderByAggregateInput({
+  const ProjectEntityMinOrderByAggregateInput({
     this.id,
     this.name,
     this.description,
@@ -2959,9 +2972,9 @@ class ProjectMinOrderByAggregateInput
       };
 }
 
-class ProjectSumOrderByAggregateInput
+class ProjectEntitySumOrderByAggregateInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectSumOrderByAggregateInput({this.id});
+  const ProjectEntitySumOrderByAggregateInput({this.id});
 
   final _i2.SortOrder? id;
 
@@ -2969,9 +2982,9 @@ class ProjectSumOrderByAggregateInput
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class ProjectOrderByWithAggregationInput
+class ProjectEntityOrderByWithAggregationInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectOrderByWithAggregationInput({
+  const ProjectEntityOrderByWithAggregationInput({
     this.id,
     this.name,
     this.description,
@@ -2994,15 +3007,15 @@ class ProjectOrderByWithAggregationInput
 
   final _i2.SortOrder? updatedAt;
 
-  final _i2.ProjectCountOrderByAggregateInput? $count;
+  final _i2.ProjectEntityCountOrderByAggregateInput? $count;
 
-  final _i2.ProjectAvgOrderByAggregateInput? $avg;
+  final _i2.ProjectEntityAvgOrderByAggregateInput? $avg;
 
-  final _i2.ProjectMaxOrderByAggregateInput? $max;
+  final _i2.ProjectEntityMaxOrderByAggregateInput? $max;
 
-  final _i2.ProjectMinOrderByAggregateInput? $min;
+  final _i2.ProjectEntityMinOrderByAggregateInput? $min;
 
-  final _i2.ProjectSumOrderByAggregateInput? $sum;
+  final _i2.ProjectEntitySumOrderByAggregateInput? $sum;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3019,9 +3032,9 @@ class ProjectOrderByWithAggregationInput
       };
 }
 
-class ProjectScalarWhereWithAggregatesInput
+class ProjectEntityScalarWhereWithAggregatesInput
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectScalarWhereWithAggregatesInput({
+  const ProjectEntityScalarWhereWithAggregatesInput({
     this.AND,
     this.OR,
     this.NOT,
@@ -3032,13 +3045,13 @@ class ProjectScalarWhereWithAggregatesInput
     this.updatedAt,
   });
 
-  final _i1.PrismaUnion<_i2.ProjectScalarWhereWithAggregatesInput,
-      Iterable<_i2.ProjectScalarWhereWithAggregatesInput>>? AND;
+  final _i1.PrismaUnion<_i2.ProjectEntityScalarWhereWithAggregatesInput,
+      Iterable<_i2.ProjectEntityScalarWhereWithAggregatesInput>>? AND;
 
-  final Iterable<_i2.ProjectScalarWhereWithAggregatesInput>? OR;
+  final Iterable<_i2.ProjectEntityScalarWhereWithAggregatesInput>? OR;
 
-  final _i1.PrismaUnion<_i2.ProjectScalarWhereWithAggregatesInput,
-      Iterable<_i2.ProjectScalarWhereWithAggregatesInput>>? NOT;
+  final _i1.PrismaUnion<_i2.ProjectEntityScalarWhereWithAggregatesInput,
+      Iterable<_i2.ProjectEntityScalarWhereWithAggregatesInput>>? NOT;
 
   final _i1.PrismaUnion<_i2.IntWithAggregatesFilter, int>? id;
 
@@ -3064,9 +3077,9 @@ class ProjectScalarWhereWithAggregatesInput
       };
 }
 
-class ProjectCountAggregateOutputTypeSelect
+class ProjectEntityCountAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectCountAggregateOutputTypeSelect({
+  const ProjectEntityCountAggregateOutputTypeSelect({
     this.id,
     this.name,
     this.description,
@@ -3098,19 +3111,19 @@ class ProjectCountAggregateOutputTypeSelect
       };
 }
 
-class ProjectGroupByOutputTypeCountArgs
+class ProjectEntityGroupByOutputTypeCountArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectGroupByOutputTypeCountArgs({this.select});
+  const ProjectEntityGroupByOutputTypeCountArgs({this.select});
 
-  final _i2.ProjectCountAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityCountAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class ProjectAvgAggregateOutputTypeSelect
+class ProjectEntityAvgAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectAvgAggregateOutputTypeSelect({this.id});
+  const ProjectEntityAvgAggregateOutputTypeSelect({this.id});
 
   final bool? id;
 
@@ -3118,19 +3131,19 @@ class ProjectAvgAggregateOutputTypeSelect
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class ProjectGroupByOutputTypeAvgArgs
+class ProjectEntityGroupByOutputTypeAvgArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectGroupByOutputTypeAvgArgs({this.select});
+  const ProjectEntityGroupByOutputTypeAvgArgs({this.select});
 
-  final _i2.ProjectAvgAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityAvgAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class ProjectSumAggregateOutputTypeSelect
+class ProjectEntitySumAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectSumAggregateOutputTypeSelect({this.id});
+  const ProjectEntitySumAggregateOutputTypeSelect({this.id});
 
   final bool? id;
 
@@ -3138,19 +3151,19 @@ class ProjectSumAggregateOutputTypeSelect
   Map<String, dynamic> toJson() => {'id': id};
 }
 
-class ProjectGroupByOutputTypeSumArgs
+class ProjectEntityGroupByOutputTypeSumArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectGroupByOutputTypeSumArgs({this.select});
+  const ProjectEntityGroupByOutputTypeSumArgs({this.select});
 
-  final _i2.ProjectSumAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntitySumAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class ProjectMinAggregateOutputTypeSelect
+class ProjectEntityMinAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectMinAggregateOutputTypeSelect({
+  const ProjectEntityMinAggregateOutputTypeSelect({
     this.id,
     this.name,
     this.description,
@@ -3178,19 +3191,19 @@ class ProjectMinAggregateOutputTypeSelect
       };
 }
 
-class ProjectGroupByOutputTypeMinArgs
+class ProjectEntityGroupByOutputTypeMinArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectGroupByOutputTypeMinArgs({this.select});
+  const ProjectEntityGroupByOutputTypeMinArgs({this.select});
 
-  final _i2.ProjectMinAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityMinAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class ProjectMaxAggregateOutputTypeSelect
+class ProjectEntityMaxAggregateOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectMaxAggregateOutputTypeSelect({
+  const ProjectEntityMaxAggregateOutputTypeSelect({
     this.id,
     this.name,
     this.description,
@@ -3218,19 +3231,19 @@ class ProjectMaxAggregateOutputTypeSelect
       };
 }
 
-class ProjectGroupByOutputTypeMaxArgs
+class ProjectEntityGroupByOutputTypeMaxArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectGroupByOutputTypeMaxArgs({this.select});
+  const ProjectEntityGroupByOutputTypeMaxArgs({this.select});
 
-  final _i2.ProjectMaxAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityMaxAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class ProjectGroupByOutputTypeSelect
+class ProjectEntityGroupByOutputTypeSelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const ProjectGroupByOutputTypeSelect({
+  const ProjectEntityGroupByOutputTypeSelect({
     this.id,
     this.name,
     this.description,
@@ -3253,15 +3266,16 @@ class ProjectGroupByOutputTypeSelect
 
   final bool? updatedAt;
 
-  final _i1.PrismaUnion<bool, _i2.ProjectGroupByOutputTypeCountArgs>? $count;
+  final _i1.PrismaUnion<bool, _i2.ProjectEntityGroupByOutputTypeCountArgs>?
+      $count;
 
-  final _i1.PrismaUnion<bool, _i2.ProjectGroupByOutputTypeAvgArgs>? $avg;
+  final _i1.PrismaUnion<bool, _i2.ProjectEntityGroupByOutputTypeAvgArgs>? $avg;
 
-  final _i1.PrismaUnion<bool, _i2.ProjectGroupByOutputTypeSumArgs>? $sum;
+  final _i1.PrismaUnion<bool, _i2.ProjectEntityGroupByOutputTypeSumArgs>? $sum;
 
-  final _i1.PrismaUnion<bool, _i2.ProjectGroupByOutputTypeMinArgs>? $min;
+  final _i1.PrismaUnion<bool, _i2.ProjectEntityGroupByOutputTypeMinArgs>? $min;
 
-  final _i1.PrismaUnion<bool, _i2.ProjectGroupByOutputTypeMaxArgs>? $max;
+  final _i1.PrismaUnion<bool, _i2.ProjectEntityGroupByOutputTypeMaxArgs>? $max;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3278,8 +3292,8 @@ class ProjectGroupByOutputTypeSelect
       };
 }
 
-class AggregateProject {
-  const AggregateProject({
+class AggregateProjectEntity {
+  const AggregateProjectEntity({
     this.$count,
     this.$avg,
     this.$sum,
@@ -3287,33 +3301,33 @@ class AggregateProject {
     this.$max,
   });
 
-  factory AggregateProject.fromJson(Map json) => AggregateProject(
+  factory AggregateProjectEntity.fromJson(Map json) => AggregateProjectEntity(
         $count: json['_count'] is Map
-            ? _i2.ProjectCountAggregateOutputType.fromJson(json['_count'])
+            ? _i2.ProjectEntityCountAggregateOutputType.fromJson(json['_count'])
             : null,
         $avg: json['_avg'] is Map
-            ? _i2.ProjectAvgAggregateOutputType.fromJson(json['_avg'])
+            ? _i2.ProjectEntityAvgAggregateOutputType.fromJson(json['_avg'])
             : null,
         $sum: json['_sum'] is Map
-            ? _i2.ProjectSumAggregateOutputType.fromJson(json['_sum'])
+            ? _i2.ProjectEntitySumAggregateOutputType.fromJson(json['_sum'])
             : null,
         $min: json['_min'] is Map
-            ? _i2.ProjectMinAggregateOutputType.fromJson(json['_min'])
+            ? _i2.ProjectEntityMinAggregateOutputType.fromJson(json['_min'])
             : null,
         $max: json['_max'] is Map
-            ? _i2.ProjectMaxAggregateOutputType.fromJson(json['_max'])
+            ? _i2.ProjectEntityMaxAggregateOutputType.fromJson(json['_max'])
             : null,
       );
 
-  final _i2.ProjectCountAggregateOutputType? $count;
+  final _i2.ProjectEntityCountAggregateOutputType? $count;
 
-  final _i2.ProjectAvgAggregateOutputType? $avg;
+  final _i2.ProjectEntityAvgAggregateOutputType? $avg;
 
-  final _i2.ProjectSumAggregateOutputType? $sum;
+  final _i2.ProjectEntitySumAggregateOutputType? $sum;
 
-  final _i2.ProjectMinAggregateOutputType? $min;
+  final _i2.ProjectEntityMinAggregateOutputType? $min;
 
-  final _i2.ProjectMaxAggregateOutputType? $max;
+  final _i2.ProjectEntityMaxAggregateOutputType? $max;
 
   Map<String, dynamic> toJson() => {
         '_count': $count?.toJson(),
@@ -3324,59 +3338,59 @@ class AggregateProject {
       };
 }
 
-class AggregateProjectCountArgs
+class AggregateProjectEntityCountArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateProjectCountArgs({this.select});
+  const AggregateProjectEntityCountArgs({this.select});
 
-  final _i2.ProjectCountAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityCountAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateProjectAvgArgs
+class AggregateProjectEntityAvgArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateProjectAvgArgs({this.select});
+  const AggregateProjectEntityAvgArgs({this.select});
 
-  final _i2.ProjectAvgAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityAvgAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateProjectSumArgs
+class AggregateProjectEntitySumArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateProjectSumArgs({this.select});
+  const AggregateProjectEntitySumArgs({this.select});
 
-  final _i2.ProjectSumAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntitySumAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateProjectMinArgs
+class AggregateProjectEntityMinArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateProjectMinArgs({this.select});
+  const AggregateProjectEntityMinArgs({this.select});
 
-  final _i2.ProjectMinAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityMinAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateProjectMaxArgs
+class AggregateProjectEntityMaxArgs
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateProjectMaxArgs({this.select});
+  const AggregateProjectEntityMaxArgs({this.select});
 
-  final _i2.ProjectMaxAggregateOutputTypeSelect? select;
+  final _i2.ProjectEntityMaxAggregateOutputTypeSelect? select;
 
   @override
   Map<String, dynamic> toJson() => {'select': select};
 }
 
-class AggregateProjectSelect
+class AggregateProjectEntitySelect
     implements _i1.JsonConvertible<Map<String, dynamic>> {
-  const AggregateProjectSelect({
+  const AggregateProjectEntitySelect({
     this.$count,
     this.$avg,
     this.$sum,
@@ -3384,15 +3398,15 @@ class AggregateProjectSelect
     this.$max,
   });
 
-  final _i1.PrismaUnion<bool, _i2.AggregateProjectCountArgs>? $count;
+  final _i1.PrismaUnion<bool, _i2.AggregateProjectEntityCountArgs>? $count;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateProjectAvgArgs>? $avg;
+  final _i1.PrismaUnion<bool, _i2.AggregateProjectEntityAvgArgs>? $avg;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateProjectSumArgs>? $sum;
+  final _i1.PrismaUnion<bool, _i2.AggregateProjectEntitySumArgs>? $sum;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateProjectMinArgs>? $min;
+  final _i1.PrismaUnion<bool, _i2.AggregateProjectEntityMinArgs>? $min;
 
-  final _i1.PrismaUnion<bool, _i2.AggregateProjectMaxArgs>? $max;
+  final _i1.PrismaUnion<bool, _i2.AggregateProjectEntityMaxArgs>? $max;
 
   @override
   Map<String, dynamic> toJson() => {

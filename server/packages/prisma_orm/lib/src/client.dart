@@ -6,14 +6,14 @@ import 'package:orm/orm.dart' as _i1;
 import 'model.dart' as _i2;
 import 'prisma.dart' as _i3;
 
-class UserDelegate {
-  const UserDelegate._(this._client);
+class UserEntityDelegate {
+  const UserEntityDelegate._(this._client);
 
   final PrismaClient _client;
 
-  _i1.ActionClient<_i2.User?> findUnique({
-    required _i3.UserWhereUniqueInput where,
-    _i3.UserSelect? select,
+  _i1.ActionClient<_i2.UserEntity?> findUnique({
+    required _i3.UserEntityWhereUniqueInput where,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -21,7 +21,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.findUnique,
       datamodel: PrismaClient.datamodel,
     );
@@ -30,16 +30,16 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User?>(
-      action: 'findUniqueUser',
+    return _i1.ActionClient<_i2.UserEntity?>(
+      action: 'findUniqueUserEntity',
       result: result,
-      factory: (e) => e != null ? _i2.User.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.UserEntity.fromJson(e) : null,
     );
   }
 
-  _i1.ActionClient<_i2.User> findUniqueOrThrow({
-    required _i3.UserWhereUniqueInput where,
-    _i3.UserSelect? select,
+  _i1.ActionClient<_i2.UserEntity> findUniqueOrThrow({
+    required _i3.UserEntityWhereUniqueInput where,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -47,7 +47,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.findUniqueOrThrow,
       datamodel: PrismaClient.datamodel,
     );
@@ -56,23 +56,24 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User>(
-      action: 'findUniqueUserOrThrow',
+    return _i1.ActionClient<_i2.UserEntity>(
+      action: 'findUniqueUserEntityOrThrow',
       result: result,
-      factory: (e) => _i2.User.fromJson(e),
+      factory: (e) => _i2.UserEntity.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.User?> findFirst({
-    _i3.UserWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.UserOrderByWithRelationInput>,
-            _i3.UserOrderByWithRelationInput>?
+  _i1.ActionClient<_i2.UserEntity?> findFirst({
+    _i3.UserEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.UserEntityOrderByWithRelationInput>,
+            _i3.UserEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.UserWhereUniqueInput? cursor,
+    _i3.UserEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i1.PrismaUnion<_i3.UserScalar, Iterable<_i3.UserScalar>>? distinct,
-    _i3.UserSelect? select,
+    _i1.PrismaUnion<_i3.UserEntityScalar, Iterable<_i3.UserEntityScalar>>?
+        distinct,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -85,7 +86,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.findFirst,
       datamodel: PrismaClient.datamodel,
     );
@@ -94,23 +95,24 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User?>(
-      action: 'findFirstUser',
+    return _i1.ActionClient<_i2.UserEntity?>(
+      action: 'findFirstUserEntity',
       result: result,
-      factory: (e) => e != null ? _i2.User.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.UserEntity.fromJson(e) : null,
     );
   }
 
-  _i1.ActionClient<_i2.User> findFirstOrThrow({
-    _i3.UserWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.UserOrderByWithRelationInput>,
-            _i3.UserOrderByWithRelationInput>?
+  _i1.ActionClient<_i2.UserEntity> findFirstOrThrow({
+    _i3.UserEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.UserEntityOrderByWithRelationInput>,
+            _i3.UserEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.UserWhereUniqueInput? cursor,
+    _i3.UserEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i1.PrismaUnion<_i3.UserScalar, Iterable<_i3.UserScalar>>? distinct,
-    _i3.UserSelect? select,
+    _i1.PrismaUnion<_i3.UserEntityScalar, Iterable<_i3.UserEntityScalar>>?
+        distinct,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -123,7 +125,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.findFirstOrThrow,
       datamodel: PrismaClient.datamodel,
     );
@@ -132,23 +134,24 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User>(
-      action: 'findFirstUserOrThrow',
+    return _i1.ActionClient<_i2.UserEntity>(
+      action: 'findFirstUserEntityOrThrow',
       result: result,
-      factory: (e) => _i2.User.fromJson(e),
+      factory: (e) => _i2.UserEntity.fromJson(e),
     );
   }
 
-  _i1.ActionClient<Iterable<_i2.User>> findMany({
-    _i3.UserWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.UserOrderByWithRelationInput>,
-            _i3.UserOrderByWithRelationInput>?
+  _i1.ActionClient<Iterable<_i2.UserEntity>> findMany({
+    _i3.UserEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.UserEntityOrderByWithRelationInput>,
+            _i3.UserEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.UserWhereUniqueInput? cursor,
+    _i3.UserEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i1.PrismaUnion<_i3.UserScalar, Iterable<_i3.UserScalar>>? distinct,
-    _i3.UserSelect? select,
+    _i1.PrismaUnion<_i3.UserEntityScalar, Iterable<_i3.UserEntityScalar>>?
+        distinct,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -161,7 +164,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.findMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -170,18 +173,19 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<Iterable<_i2.User>>(
-      action: 'findManyUser',
+    return _i1.ActionClient<Iterable<_i2.UserEntity>>(
+      action: 'findManyUserEntity',
       result: result,
       factory: (values) =>
-          (values as Iterable).map((e) => _i2.User.fromJson(e)),
+          (values as Iterable).map((e) => _i2.UserEntity.fromJson(e)),
     );
   }
 
-  _i1.ActionClient<_i2.User> create({
-    required _i1.PrismaUnion<_i3.UserCreateInput, _i3.UserUncheckedCreateInput>
+  _i1.ActionClient<_i2.UserEntity> create({
+    required _i1.PrismaUnion<_i3.UserEntityCreateInput,
+            _i3.UserEntityUncheckedCreateInput>
         data,
-    _i3.UserSelect? select,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'data': data,
@@ -189,7 +193,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.createOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -198,16 +202,16 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User>(
-      action: 'createOneUser',
+    return _i1.ActionClient<_i2.UserEntity>(
+      action: 'createOneUserEntity',
       result: result,
-      factory: (e) => _i2.User.fromJson(e),
+      factory: (e) => _i2.UserEntity.fromJson(e),
     );
   }
 
   _i1.ActionClient<_i3.AffectedRowsOutput> createMany({
-    required _i1
-        .PrismaUnion<_i3.UserCreateManyInput, Iterable<_i3.UserCreateManyInput>>
+    required _i1.PrismaUnion<_i3.UserEntityCreateManyInput,
+            Iterable<_i3.UserEntityCreateManyInput>>
         data,
     bool? skipDuplicates,
   }) {
@@ -217,7 +221,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.createMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -227,17 +231,18 @@ class UserDelegate {
       transaction: _client.$transaction.transaction,
     );
     return _i1.ActionClient<_i3.AffectedRowsOutput>(
-      action: 'createManyUser',
+      action: 'createManyUserEntity',
       result: result,
       factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.User?> update({
-    required _i1.PrismaUnion<_i3.UserUpdateInput, _i3.UserUncheckedUpdateInput>
+  _i1.ActionClient<_i2.UserEntity?> update({
+    required _i1.PrismaUnion<_i3.UserEntityUpdateInput,
+            _i3.UserEntityUncheckedUpdateInput>
         data,
-    required _i3.UserWhereUniqueInput where,
-    _i3.UserSelect? select,
+    required _i3.UserEntityWhereUniqueInput where,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'data': data,
@@ -246,7 +251,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.updateOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -255,18 +260,18 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User?>(
-      action: 'updateOneUser',
+    return _i1.ActionClient<_i2.UserEntity?>(
+      action: 'updateOneUserEntity',
       result: result,
-      factory: (e) => e != null ? _i2.User.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.UserEntity.fromJson(e) : null,
     );
   }
 
   _i1.ActionClient<_i3.AffectedRowsOutput> updateMany({
-    required _i1.PrismaUnion<_i3.UserUpdateManyMutationInput,
-            _i3.UserUncheckedUpdateManyInput>
+    required _i1.PrismaUnion<_i3.UserEntityUpdateManyMutationInput,
+            _i3.UserEntityUncheckedUpdateManyInput>
         data,
-    _i3.UserWhereInput? where,
+    _i3.UserEntityWhereInput? where,
   }) {
     final args = {
       'data': data,
@@ -274,7 +279,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.updateMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -284,19 +289,21 @@ class UserDelegate {
       transaction: _client.$transaction.transaction,
     );
     return _i1.ActionClient<_i3.AffectedRowsOutput>(
-      action: 'updateManyUser',
+      action: 'updateManyUserEntity',
       result: result,
       factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.User> upsert({
-    required _i3.UserWhereUniqueInput where,
-    required _i1.PrismaUnion<_i3.UserCreateInput, _i3.UserUncheckedCreateInput>
+  _i1.ActionClient<_i2.UserEntity> upsert({
+    required _i3.UserEntityWhereUniqueInput where,
+    required _i1.PrismaUnion<_i3.UserEntityCreateInput,
+            _i3.UserEntityUncheckedCreateInput>
         create,
-    required _i1.PrismaUnion<_i3.UserUpdateInput, _i3.UserUncheckedUpdateInput>
+    required _i1.PrismaUnion<_i3.UserEntityUpdateInput,
+            _i3.UserEntityUncheckedUpdateInput>
         update,
-    _i3.UserSelect? select,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -306,7 +313,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.upsertOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -315,16 +322,16 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User>(
-      action: 'upsertOneUser',
+    return _i1.ActionClient<_i2.UserEntity>(
+      action: 'upsertOneUserEntity',
       result: result,
-      factory: (e) => _i2.User.fromJson(e),
+      factory: (e) => _i2.UserEntity.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.User?> delete({
-    required _i3.UserWhereUniqueInput where,
-    _i3.UserSelect? select,
+  _i1.ActionClient<_i2.UserEntity?> delete({
+    required _i3.UserEntityWhereUniqueInput where,
+    _i3.UserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -332,7 +339,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.deleteOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -341,19 +348,19 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.User?>(
-      action: 'deleteOneUser',
+    return _i1.ActionClient<_i2.UserEntity?>(
+      action: 'deleteOneUserEntity',
       result: result,
-      factory: (e) => e != null ? _i2.User.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.UserEntity.fromJson(e) : null,
     );
   }
 
   _i1.ActionClient<_i3.AffectedRowsOutput> deleteMany(
-      {_i3.UserWhereInput? where}) {
+      {_i3.UserEntityWhereInput? where}) {
     final args = {'where': where};
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.deleteMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -363,22 +370,24 @@ class UserDelegate {
       transaction: _client.$transaction.transaction,
     );
     return _i1.ActionClient<_i3.AffectedRowsOutput>(
-      action: 'deleteManyUser',
+      action: 'deleteManyUserEntity',
       result: result,
       factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
     );
   }
 
-  _i1.ActionClient<Iterable<_i3.UserGroupByOutputType>> groupBy({
-    _i3.UserWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.UserOrderByWithAggregationInput>,
-            _i3.UserOrderByWithAggregationInput>?
+  _i1.ActionClient<Iterable<_i3.UserEntityGroupByOutputType>> groupBy({
+    _i3.UserEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.UserEntityOrderByWithAggregationInput>,
+            _i3.UserEntityOrderByWithAggregationInput>?
         orderBy,
-    required _i1.PrismaUnion<Iterable<_i3.UserScalar>, _i3.UserScalar> by,
-    _i3.UserScalarWhereWithAggregatesInput? having,
+    required _i1
+        .PrismaUnion<Iterable<_i3.UserEntityScalar>, _i3.UserEntityScalar>
+        by,
+    _i3.UserEntityScalarWhereWithAggregatesInput? having,
     int? take,
     int? skip,
-    _i3.UserGroupByOutputTypeSelect? select,
+    _i3.UserEntityGroupByOutputTypeSelect? select,
   }) {
     final args = {
       'where': where,
@@ -391,7 +400,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.groupBy,
       datamodel: PrismaClient.datamodel,
     );
@@ -400,23 +409,23 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<Iterable<_i3.UserGroupByOutputType>>(
-      action: 'groupByUser',
+    return _i1.ActionClient<Iterable<_i3.UserEntityGroupByOutputType>>(
+      action: 'groupByUserEntity',
       result: result,
       factory: (values) => (values as Iterable)
-          .map((e) => _i3.UserGroupByOutputType.fromJson(e)),
+          .map((e) => _i3.UserEntityGroupByOutputType.fromJson(e)),
     );
   }
 
-  _i1.ActionClient<_i3.AggregateUser> aggregate({
-    _i3.UserWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.UserOrderByWithRelationInput>,
-            _i3.UserOrderByWithRelationInput>?
+  _i1.ActionClient<_i3.AggregateUserEntity> aggregate({
+    _i3.UserEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.UserEntityOrderByWithRelationInput>,
+            _i3.UserEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.UserWhereUniqueInput? cursor,
+    _i3.UserEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i3.AggregateUserSelect? select,
+    _i3.AggregateUserEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -428,7 +437,7 @@ class UserDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'User',
+      modelName: 'UserEntity',
       action: _i1.JsonQueryAction.aggregate,
       datamodel: PrismaClient.datamodel,
     );
@@ -437,22 +446,22 @@ class UserDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i3.AggregateUser>(
-      action: 'aggregateUser',
+    return _i1.ActionClient<_i3.AggregateUserEntity>(
+      action: 'aggregateUserEntity',
       result: result,
-      factory: (e) => _i3.AggregateUser.fromJson(e),
+      factory: (e) => _i3.AggregateUserEntity.fromJson(e),
     );
   }
 }
 
-class ProjectDelegate {
-  const ProjectDelegate._(this._client);
+class ProjectEntityDelegate {
+  const ProjectEntityDelegate._(this._client);
 
   final PrismaClient _client;
 
-  _i1.ActionClient<_i2.Project?> findUnique({
-    required _i3.ProjectWhereUniqueInput where,
-    _i3.ProjectSelect? select,
+  _i1.ActionClient<_i2.ProjectEntity?> findUnique({
+    required _i3.ProjectEntityWhereUniqueInput where,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -460,7 +469,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.findUnique,
       datamodel: PrismaClient.datamodel,
     );
@@ -469,16 +478,16 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project?>(
-      action: 'findUniqueProject',
+    return _i1.ActionClient<_i2.ProjectEntity?>(
+      action: 'findUniqueProjectEntity',
       result: result,
-      factory: (e) => e != null ? _i2.Project.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.ProjectEntity.fromJson(e) : null,
     );
   }
 
-  _i1.ActionClient<_i2.Project> findUniqueOrThrow({
-    required _i3.ProjectWhereUniqueInput where,
-    _i3.ProjectSelect? select,
+  _i1.ActionClient<_i2.ProjectEntity> findUniqueOrThrow({
+    required _i3.ProjectEntityWhereUniqueInput where,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -486,7 +495,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.findUniqueOrThrow,
       datamodel: PrismaClient.datamodel,
     );
@@ -495,23 +504,24 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project>(
-      action: 'findUniqueProjectOrThrow',
+    return _i1.ActionClient<_i2.ProjectEntity>(
+      action: 'findUniqueProjectEntityOrThrow',
       result: result,
-      factory: (e) => _i2.Project.fromJson(e),
+      factory: (e) => _i2.ProjectEntity.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.Project?> findFirst({
-    _i3.ProjectWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.ProjectOrderByWithRelationInput>,
-            _i3.ProjectOrderByWithRelationInput>?
+  _i1.ActionClient<_i2.ProjectEntity?> findFirst({
+    _i3.ProjectEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ProjectEntityOrderByWithRelationInput>,
+            _i3.ProjectEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.ProjectWhereUniqueInput? cursor,
+    _i3.ProjectEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i1.PrismaUnion<_i3.ProjectScalar, Iterable<_i3.ProjectScalar>>? distinct,
-    _i3.ProjectSelect? select,
+    _i1.PrismaUnion<_i3.ProjectEntityScalar, Iterable<_i3.ProjectEntityScalar>>?
+        distinct,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -524,7 +534,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.findFirst,
       datamodel: PrismaClient.datamodel,
     );
@@ -533,23 +543,24 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project?>(
-      action: 'findFirstProject',
+    return _i1.ActionClient<_i2.ProjectEntity?>(
+      action: 'findFirstProjectEntity',
       result: result,
-      factory: (e) => e != null ? _i2.Project.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.ProjectEntity.fromJson(e) : null,
     );
   }
 
-  _i1.ActionClient<_i2.Project> findFirstOrThrow({
-    _i3.ProjectWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.ProjectOrderByWithRelationInput>,
-            _i3.ProjectOrderByWithRelationInput>?
+  _i1.ActionClient<_i2.ProjectEntity> findFirstOrThrow({
+    _i3.ProjectEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ProjectEntityOrderByWithRelationInput>,
+            _i3.ProjectEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.ProjectWhereUniqueInput? cursor,
+    _i3.ProjectEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i1.PrismaUnion<_i3.ProjectScalar, Iterable<_i3.ProjectScalar>>? distinct,
-    _i3.ProjectSelect? select,
+    _i1.PrismaUnion<_i3.ProjectEntityScalar, Iterable<_i3.ProjectEntityScalar>>?
+        distinct,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -562,7 +573,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.findFirstOrThrow,
       datamodel: PrismaClient.datamodel,
     );
@@ -571,23 +582,24 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project>(
-      action: 'findFirstProjectOrThrow',
+    return _i1.ActionClient<_i2.ProjectEntity>(
+      action: 'findFirstProjectEntityOrThrow',
       result: result,
-      factory: (e) => _i2.Project.fromJson(e),
+      factory: (e) => _i2.ProjectEntity.fromJson(e),
     );
   }
 
-  _i1.ActionClient<Iterable<_i2.Project>> findMany({
-    _i3.ProjectWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.ProjectOrderByWithRelationInput>,
-            _i3.ProjectOrderByWithRelationInput>?
+  _i1.ActionClient<Iterable<_i2.ProjectEntity>> findMany({
+    _i3.ProjectEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ProjectEntityOrderByWithRelationInput>,
+            _i3.ProjectEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.ProjectWhereUniqueInput? cursor,
+    _i3.ProjectEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i1.PrismaUnion<_i3.ProjectScalar, Iterable<_i3.ProjectScalar>>? distinct,
-    _i3.ProjectSelect? select,
+    _i1.PrismaUnion<_i3.ProjectEntityScalar, Iterable<_i3.ProjectEntityScalar>>?
+        distinct,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -600,7 +612,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.findMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -609,19 +621,19 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<Iterable<_i2.Project>>(
-      action: 'findManyProject',
+    return _i1.ActionClient<Iterable<_i2.ProjectEntity>>(
+      action: 'findManyProjectEntity',
       result: result,
       factory: (values) =>
-          (values as Iterable).map((e) => _i2.Project.fromJson(e)),
+          (values as Iterable).map((e) => _i2.ProjectEntity.fromJson(e)),
     );
   }
 
-  _i1.ActionClient<_i2.Project> create({
-    required _i1
-        .PrismaUnion<_i3.ProjectCreateInput, _i3.ProjectUncheckedCreateInput>
+  _i1.ActionClient<_i2.ProjectEntity> create({
+    required _i1.PrismaUnion<_i3.ProjectEntityCreateInput,
+            _i3.ProjectEntityUncheckedCreateInput>
         data,
-    _i3.ProjectSelect? select,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'data': data,
@@ -629,7 +641,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.createOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -638,16 +650,16 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project>(
-      action: 'createOneProject',
+    return _i1.ActionClient<_i2.ProjectEntity>(
+      action: 'createOneProjectEntity',
       result: result,
-      factory: (e) => _i2.Project.fromJson(e),
+      factory: (e) => _i2.ProjectEntity.fromJson(e),
     );
   }
 
   _i1.ActionClient<_i3.AffectedRowsOutput> createMany({
-    required _i1.PrismaUnion<_i3.ProjectCreateManyInput,
-            Iterable<_i3.ProjectCreateManyInput>>
+    required _i1.PrismaUnion<_i3.ProjectEntityCreateManyInput,
+            Iterable<_i3.ProjectEntityCreateManyInput>>
         data,
     bool? skipDuplicates,
   }) {
@@ -657,7 +669,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.createMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -667,18 +679,18 @@ class ProjectDelegate {
       transaction: _client.$transaction.transaction,
     );
     return _i1.ActionClient<_i3.AffectedRowsOutput>(
-      action: 'createManyProject',
+      action: 'createManyProjectEntity',
       result: result,
       factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.Project?> update({
-    required _i1
-        .PrismaUnion<_i3.ProjectUpdateInput, _i3.ProjectUncheckedUpdateInput>
+  _i1.ActionClient<_i2.ProjectEntity?> update({
+    required _i1.PrismaUnion<_i3.ProjectEntityUpdateInput,
+            _i3.ProjectEntityUncheckedUpdateInput>
         data,
-    required _i3.ProjectWhereUniqueInput where,
-    _i3.ProjectSelect? select,
+    required _i3.ProjectEntityWhereUniqueInput where,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'data': data,
@@ -687,7 +699,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.updateOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -696,18 +708,18 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project?>(
-      action: 'updateOneProject',
+    return _i1.ActionClient<_i2.ProjectEntity?>(
+      action: 'updateOneProjectEntity',
       result: result,
-      factory: (e) => e != null ? _i2.Project.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.ProjectEntity.fromJson(e) : null,
     );
   }
 
   _i1.ActionClient<_i3.AffectedRowsOutput> updateMany({
-    required _i1.PrismaUnion<_i3.ProjectUpdateManyMutationInput,
-            _i3.ProjectUncheckedUpdateManyInput>
+    required _i1.PrismaUnion<_i3.ProjectEntityUpdateManyMutationInput,
+            _i3.ProjectEntityUncheckedUpdateManyInput>
         data,
-    _i3.ProjectWhereInput? where,
+    _i3.ProjectEntityWhereInput? where,
   }) {
     final args = {
       'data': data,
@@ -715,7 +727,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.updateMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -725,21 +737,21 @@ class ProjectDelegate {
       transaction: _client.$transaction.transaction,
     );
     return _i1.ActionClient<_i3.AffectedRowsOutput>(
-      action: 'updateManyProject',
+      action: 'updateManyProjectEntity',
       result: result,
       factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.Project> upsert({
-    required _i3.ProjectWhereUniqueInput where,
-    required _i1
-        .PrismaUnion<_i3.ProjectCreateInput, _i3.ProjectUncheckedCreateInput>
+  _i1.ActionClient<_i2.ProjectEntity> upsert({
+    required _i3.ProjectEntityWhereUniqueInput where,
+    required _i1.PrismaUnion<_i3.ProjectEntityCreateInput,
+            _i3.ProjectEntityUncheckedCreateInput>
         create,
-    required _i1
-        .PrismaUnion<_i3.ProjectUpdateInput, _i3.ProjectUncheckedUpdateInput>
+    required _i1.PrismaUnion<_i3.ProjectEntityUpdateInput,
+            _i3.ProjectEntityUncheckedUpdateInput>
         update,
-    _i3.ProjectSelect? select,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -749,7 +761,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.upsertOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -758,16 +770,16 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project>(
-      action: 'upsertOneProject',
+    return _i1.ActionClient<_i2.ProjectEntity>(
+      action: 'upsertOneProjectEntity',
       result: result,
-      factory: (e) => _i2.Project.fromJson(e),
+      factory: (e) => _i2.ProjectEntity.fromJson(e),
     );
   }
 
-  _i1.ActionClient<_i2.Project?> delete({
-    required _i3.ProjectWhereUniqueInput where,
-    _i3.ProjectSelect? select,
+  _i1.ActionClient<_i2.ProjectEntity?> delete({
+    required _i3.ProjectEntityWhereUniqueInput where,
+    _i3.ProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -775,7 +787,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.deleteOne,
       datamodel: PrismaClient.datamodel,
     );
@@ -784,19 +796,19 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i2.Project?>(
-      action: 'deleteOneProject',
+    return _i1.ActionClient<_i2.ProjectEntity?>(
+      action: 'deleteOneProjectEntity',
       result: result,
-      factory: (e) => e != null ? _i2.Project.fromJson(e) : null,
+      factory: (e) => e != null ? _i2.ProjectEntity.fromJson(e) : null,
     );
   }
 
   _i1.ActionClient<_i3.AffectedRowsOutput> deleteMany(
-      {_i3.ProjectWhereInput? where}) {
+      {_i3.ProjectEntityWhereInput? where}) {
     final args = {'where': where};
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.deleteMany,
       datamodel: PrismaClient.datamodel,
     );
@@ -806,22 +818,24 @@ class ProjectDelegate {
       transaction: _client.$transaction.transaction,
     );
     return _i1.ActionClient<_i3.AffectedRowsOutput>(
-      action: 'deleteManyProject',
+      action: 'deleteManyProjectEntity',
       result: result,
       factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
     );
   }
 
-  _i1.ActionClient<Iterable<_i3.ProjectGroupByOutputType>> groupBy({
-    _i3.ProjectWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.ProjectOrderByWithAggregationInput>,
-            _i3.ProjectOrderByWithAggregationInput>?
+  _i1.ActionClient<Iterable<_i3.ProjectEntityGroupByOutputType>> groupBy({
+    _i3.ProjectEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ProjectEntityOrderByWithAggregationInput>,
+            _i3.ProjectEntityOrderByWithAggregationInput>?
         orderBy,
-    required _i1.PrismaUnion<Iterable<_i3.ProjectScalar>, _i3.ProjectScalar> by,
-    _i3.ProjectScalarWhereWithAggregatesInput? having,
+    required _i1
+        .PrismaUnion<Iterable<_i3.ProjectEntityScalar>, _i3.ProjectEntityScalar>
+        by,
+    _i3.ProjectEntityScalarWhereWithAggregatesInput? having,
     int? take,
     int? skip,
-    _i3.ProjectGroupByOutputTypeSelect? select,
+    _i3.ProjectEntityGroupByOutputTypeSelect? select,
   }) {
     final args = {
       'where': where,
@@ -834,7 +848,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.groupBy,
       datamodel: PrismaClient.datamodel,
     );
@@ -843,23 +857,23 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<Iterable<_i3.ProjectGroupByOutputType>>(
-      action: 'groupByProject',
+    return _i1.ActionClient<Iterable<_i3.ProjectEntityGroupByOutputType>>(
+      action: 'groupByProjectEntity',
       result: result,
       factory: (values) => (values as Iterable)
-          .map((e) => _i3.ProjectGroupByOutputType.fromJson(e)),
+          .map((e) => _i3.ProjectEntityGroupByOutputType.fromJson(e)),
     );
   }
 
-  _i1.ActionClient<_i3.AggregateProject> aggregate({
-    _i3.ProjectWhereInput? where,
-    _i1.PrismaUnion<Iterable<_i3.ProjectOrderByWithRelationInput>,
-            _i3.ProjectOrderByWithRelationInput>?
+  _i1.ActionClient<_i3.AggregateProjectEntity> aggregate({
+    _i3.ProjectEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ProjectEntityOrderByWithRelationInput>,
+            _i3.ProjectEntityOrderByWithRelationInput>?
         orderBy,
-    _i3.ProjectWhereUniqueInput? cursor,
+    _i3.ProjectEntityWhereUniqueInput? cursor,
     int? take,
     int? skip,
-    _i3.AggregateProjectSelect? select,
+    _i3.AggregateProjectEntitySelect? select,
   }) {
     final args = {
       'where': where,
@@ -871,7 +885,7 @@ class ProjectDelegate {
     };
     final query = _i1.serializeJsonQuery(
       args: args,
-      modelName: 'Project',
+      modelName: 'ProjectEntity',
       action: _i1.JsonQueryAction.aggregate,
       datamodel: PrismaClient.datamodel,
     );
@@ -880,10 +894,10 @@ class ProjectDelegate {
       headers: _client.$transaction.headers,
       transaction: _client.$transaction.transaction,
     );
-    return _i1.ActionClient<_i3.AggregateProject>(
-      action: 'aggregateProject',
+    return _i1.ActionClient<_i3.AggregateProjectEntity>(
+      action: 'aggregateProjectEntity',
       result: result,
-      factory: (e) => _i3.AggregateProject.fromJson(e),
+      factory: (e) => _i3.AggregateProjectEntity.fromJson(e),
     );
   }
 }
@@ -915,7 +929,7 @@ class PrismaClient {
     }
     final engine = _i4.BinaryEngine(
       schema:
-          '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = "dart run orm"\n  output   = "../lib/src/generated/prisma_client"\n}\n\ndatasource db {\n  provider = "postgresql"\n  url      = env("DATABASE_URL")\n}\n\nmodel User {\n  id    Int     @id @default(autoincrement())\n  email String  @unique\n  name  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\nmodel Project {\n  id    Int     @id @default(autoincrement())\n  name String\n  description  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\n\n',
+          '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = "dart run orm"\n  output   = "../lib/src/"\n}\n\ndatasource db {\n  provider = "postgresql"\n  url      = env("DATABASE_URL")\n}\n\nmodel UserEntity {\n  id    Int     @id @default(autoincrement())\n  email String  @unique\n  name  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\nmodel ProjectEntity {\n  id    Int     @id @default(autoincrement())\n  name String\n  description  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\n\n',
       datasources: datasources,
     );
     final metrics = _i1.MetricsClient(engine);
@@ -937,7 +951,7 @@ class PrismaClient {
     'enums': [],
     'models': [
       {
-        'name': 'User',
+        'name': 'UserEntity',
         'dbName': null,
         'fields': [
           {
@@ -1020,7 +1034,7 @@ class PrismaClient {
         'isGenerated': false,
       },
       {
-        'name': 'Project',
+        'name': 'ProjectEntity',
         'dbName': null,
         'fields': [
           {
@@ -1116,9 +1130,9 @@ class PrismaClient {
 
   Future<void> $disconnect() => _engine.stop();
 
-  UserDelegate get user => UserDelegate._(this);
+  UserEntityDelegate get userEntity => UserEntityDelegate._(this);
 
-  ProjectDelegate get project => ProjectDelegate._(this);
+  ProjectEntityDelegate get projectEntity => ProjectEntityDelegate._(this);
 
   _i1.RawClient<PrismaClient> get $raw => _i1.RawClient<PrismaClient>(
         _engine,

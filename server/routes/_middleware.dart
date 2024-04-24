@@ -1,16 +1,16 @@
-import 'package:auth_data_source/auth.dart';
+import 'package:auth/auth.dart';
 import 'package:dart_frog/dart_frog.dart';
 import 'package:dart_frog_request_logger/dart_frog_request_logger.dart';
 import 'package:dart_frog_request_logger/log_formatters.dart';
-import 'package:prisma_data_source/data_source.dart';
-import 'package:projects_data_source/projects_data_source.dart';
-import 'package:users_data_source/users.dart';
+import 'package:prisma_repositories/prisma_repositories.dart';
+import 'package:projects_repository/projects_repository.dart';
+import 'package:users_repository/users_repository.dart';
 
-final _projectsDataSource = PrismaProjectsDataSource(
+final _projectsDataSource = PrismaProjectsRepository(
   client: PrismaClient(),
 );
 
-final _usersDataSource = PrismaUsersDataSource(
+final _usersDataSource = PrismaUsersRepository(
   client: PrismaClient(),
 );
 
@@ -36,8 +36,8 @@ Handler middleware(Handler handler) => handler
       ),
     )
     .use(
-      provider<ProjectsDataSource>((context) => _projectsDataSource),
+      provider<ProjectsRepository>((context) => _projectsDataSource),
     )
     .use(
-      provider<UsersDataSource>((context) => _usersDataSource),
+      provider<UsersRepository>((context) => _usersDataSource),
     );

@@ -1,1 +1,6 @@
 include: package:pro_lints/common.yaml
+
+analyzer:
+  exclude:
+    - lib/src/**/**.freezed.dart
+    - lib/src/**/**.g.dart

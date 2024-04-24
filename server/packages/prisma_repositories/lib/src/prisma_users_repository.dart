@@ -1,8 +1,8 @@
 import 'package:prisma_orm/prisma_orm.dart' as prisma;
-import 'package:users_data_source/users.dart';
+import 'package:users_repository/users_repository.dart';
 
-class PrismaUsersDataSource implements UsersDataSource {
-  PrismaUsersDataSource({required prisma.PrismaClient client})
+class PrismaUsersRepository implements UsersRepository {
+  PrismaUsersRepository({required prisma.PrismaClient client})
       : _client = client;
 
   final prisma.PrismaClient _client;

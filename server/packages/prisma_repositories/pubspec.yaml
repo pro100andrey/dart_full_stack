@@ -1,4 +1,4 @@
-name: prisma_data_source
+name: prisma_repositories
 description: Prisma projects base data source
 version: 0.1.0+1
 publish_to: none
@@ -7,13 +7,15 @@ environment:
   sdk: ^3.3.3
 
 dependencies:
+  models:
+    path: ../models
   orm: ^4.1.0
   prisma_orm:
     path: ../prisma_orm
-  projects_data_source:
-    path: ../projects_data_source
-  users_data_source:
-    path: ../users_data_source
+  projects_repository:
+    path: ../projects_repository
+  users_repository:
+    path: ../users_repository
 
 dev_dependencies:
   mocktail: ^1.0.3
