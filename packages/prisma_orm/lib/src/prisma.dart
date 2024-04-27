@@ -3417,3 +3417,1145 @@ class AggregateProjectEntitySelect
         '_max': $max,
       };
 }
+
+class ChatsEntityWhereInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityWhereInput({
+    this.AND,
+    this.OR,
+    this.NOT,
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i1.PrismaUnion<_i2.ChatsEntityWhereInput,
+      Iterable<_i2.ChatsEntityWhereInput>>? AND;
+
+  final Iterable<_i2.ChatsEntityWhereInput>? OR;
+
+  final _i1.PrismaUnion<_i2.ChatsEntityWhereInput,
+      Iterable<_i2.ChatsEntityWhereInput>>? NOT;
+
+  final _i1.PrismaUnion<_i2.IntFilter, int>? id;
+
+  final _i1.PrismaUnion<_i2.StringFilter, String>? name;
+
+  final _i1.PrismaUnion<_i2.StringNullableFilter,
+      _i1.PrismaUnion<String, _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<_i2.DateTimeFilter, DateTime>? createdAt;
+
+  final _i1.PrismaUnion<_i2.DateTimeFilter, DateTime>? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'AND': AND,
+        'OR': OR,
+        'NOT': NOT,
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityWhereUniqueInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityWhereUniqueInput({
+    this.id,
+    this.AND,
+    this.OR,
+    this.NOT,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final int? id;
+
+  final _i1.PrismaUnion<_i2.ChatsEntityWhereInput,
+      Iterable<_i2.ChatsEntityWhereInput>>? AND;
+
+  final Iterable<_i2.ChatsEntityWhereInput>? OR;
+
+  final _i1.PrismaUnion<_i2.ChatsEntityWhereInput,
+      Iterable<_i2.ChatsEntityWhereInput>>? NOT;
+
+  final _i1.PrismaUnion<_i2.StringFilter, String>? name;
+
+  final _i1.PrismaUnion<_i2.StringNullableFilter,
+      _i1.PrismaUnion<String, _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<_i2.DateTimeFilter, DateTime>? createdAt;
+
+  final _i1.PrismaUnion<_i2.DateTimeFilter, DateTime>? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'AND': AND,
+        'OR': OR,
+        'NOT': NOT,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntitySelect implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntitySelect({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final bool? id;
+
+  final bool? name;
+
+  final bool? description;
+
+  final bool? createdAt;
+
+  final bool? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityOrderByWithRelationInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityOrderByWithRelationInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i2.SortOrder? id;
+
+  final _i2.SortOrder? name;
+
+  final _i1.PrismaUnion<_i2.SortOrder, _i2.SortOrderInput>? description;
+
+  final _i2.SortOrder? createdAt;
+
+  final _i2.SortOrder? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+enum ChatsEntityScalar<T> implements _i1.PrismaEnum, _i1.Reference<T> {
+  id<int>('id', 'ChatsEntity'),
+  name$<String>('name', 'ChatsEntity'),
+  description<String>('description', 'ChatsEntity'),
+  createdAt<DateTime>('createdAt', 'ChatsEntity'),
+  updatedAt<DateTime>('updatedAt', 'ChatsEntity');
+
+  const ChatsEntityScalar(
+    this.name,
+    this.model,
+  );
+
+  @override
+  final String name;
+
+  @override
+  final String model;
+}
+
+class ChatsEntityCreateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityCreateInput({
+    required this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final String name;
+
+  final _i1.PrismaUnion<String, _i1.PrismaNull>? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityUncheckedCreateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityUncheckedCreateInput({
+    this.id,
+    required this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final int? id;
+
+  final String name;
+
+  final _i1.PrismaUnion<String, _i1.PrismaNull>? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityCreateManyInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityCreateManyInput({
+    this.id,
+    required this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final int? id;
+
+  final String name;
+
+  final _i1.PrismaUnion<String, _i1.PrismaNull>? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityUpdateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityUpdateInput({
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i1.PrismaUnion<String, _i2.StringFieldUpdateOperationsInput>? name;
+
+  final _i1.PrismaUnion<
+      String,
+      _i1.PrismaUnion<_i2.NullableStringFieldUpdateOperationsInput,
+          _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      createdAt;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityUncheckedUpdateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityUncheckedUpdateInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i1.PrismaUnion<int, _i2.IntFieldUpdateOperationsInput>? id;
+
+  final _i1.PrismaUnion<String, _i2.StringFieldUpdateOperationsInput>? name;
+
+  final _i1.PrismaUnion<
+      String,
+      _i1.PrismaUnion<_i2.NullableStringFieldUpdateOperationsInput,
+          _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      createdAt;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityUpdateManyMutationInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityUpdateManyMutationInput({
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i1.PrismaUnion<String, _i2.StringFieldUpdateOperationsInput>? name;
+
+  final _i1.PrismaUnion<
+      String,
+      _i1.PrismaUnion<_i2.NullableStringFieldUpdateOperationsInput,
+          _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      createdAt;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityUncheckedUpdateManyInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityUncheckedUpdateManyInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i1.PrismaUnion<int, _i2.IntFieldUpdateOperationsInput>? id;
+
+  final _i1.PrismaUnion<String, _i2.StringFieldUpdateOperationsInput>? name;
+
+  final _i1.PrismaUnion<
+      String,
+      _i1.PrismaUnion<_i2.NullableStringFieldUpdateOperationsInput,
+          _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      createdAt;
+
+  final _i1.PrismaUnion<DateTime, _i2.DateTimeFieldUpdateOperationsInput>?
+      updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityCountAggregateOutputType {
+  const ChatsEntityCountAggregateOutputType({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+    this.$all,
+  });
+
+  factory ChatsEntityCountAggregateOutputType.fromJson(Map json) =>
+      ChatsEntityCountAggregateOutputType(
+        id: json['id'],
+        name: json['name'],
+        description: json['description'],
+        createdAt: json['createdAt'],
+        updatedAt: json['updatedAt'],
+        $all: json['_all'],
+      );
+
+  final int? id;
+
+  final int? name;
+
+  final int? description;
+
+  final int? createdAt;
+
+  final int? updatedAt;
+
+  final int? $all;
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+        '_all': $all,
+      };
+}
+
+class ChatsEntityAvgAggregateOutputType {
+  const ChatsEntityAvgAggregateOutputType({this.id});
+
+  factory ChatsEntityAvgAggregateOutputType.fromJson(Map json) =>
+      ChatsEntityAvgAggregateOutputType(id: json['id']);
+
+  final double? id;
+
+  Map<String, dynamic> toJson() => {'id': id};
+}
+
+class ChatsEntitySumAggregateOutputType {
+  const ChatsEntitySumAggregateOutputType({this.id});
+
+  factory ChatsEntitySumAggregateOutputType.fromJson(Map json) =>
+      ChatsEntitySumAggregateOutputType(id: json['id']);
+
+  final int? id;
+
+  Map<String, dynamic> toJson() => {'id': id};
+}
+
+class ChatsEntityMinAggregateOutputType {
+  const ChatsEntityMinAggregateOutputType({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  factory ChatsEntityMinAggregateOutputType.fromJson(Map json) =>
+      ChatsEntityMinAggregateOutputType(
+        id: json['id'],
+        name: json['name'],
+        description: json['description'],
+        createdAt: json['createdAt'],
+        updatedAt: json['updatedAt'],
+      );
+
+  final int? id;
+
+  final String? name;
+
+  final String? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityMaxAggregateOutputType {
+  const ChatsEntityMaxAggregateOutputType({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  factory ChatsEntityMaxAggregateOutputType.fromJson(Map json) =>
+      ChatsEntityMaxAggregateOutputType(
+        id: json['id'],
+        name: json['name'],
+        description: json['description'],
+        createdAt: json['createdAt'],
+        updatedAt: json['updatedAt'],
+      );
+
+  final int? id;
+
+  final String? name;
+
+  final String? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityGroupByOutputType {
+  const ChatsEntityGroupByOutputType({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  factory ChatsEntityGroupByOutputType.fromJson(Map json) =>
+      ChatsEntityGroupByOutputType(
+        id: json['id'],
+        name: json['name'],
+        description: json['description'],
+        createdAt: json['createdAt'],
+        updatedAt: json['updatedAt'],
+        $count: json['_count'] is Map
+            ? _i2.ChatsEntityCountAggregateOutputType.fromJson(json['_count'])
+            : null,
+        $avg: json['_avg'] is Map
+            ? _i2.ChatsEntityAvgAggregateOutputType.fromJson(json['_avg'])
+            : null,
+        $sum: json['_sum'] is Map
+            ? _i2.ChatsEntitySumAggregateOutputType.fromJson(json['_sum'])
+            : null,
+        $min: json['_min'] is Map
+            ? _i2.ChatsEntityMinAggregateOutputType.fromJson(json['_min'])
+            : null,
+        $max: json['_max'] is Map
+            ? _i2.ChatsEntityMaxAggregateOutputType.fromJson(json['_max'])
+            : null,
+      );
+
+  final int? id;
+
+  final String? name;
+
+  final String? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  final _i2.ChatsEntityCountAggregateOutputType? $count;
+
+  final _i2.ChatsEntityAvgAggregateOutputType? $avg;
+
+  final _i2.ChatsEntitySumAggregateOutputType? $sum;
+
+  final _i2.ChatsEntityMinAggregateOutputType? $min;
+
+  final _i2.ChatsEntityMaxAggregateOutputType? $max;
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+        '_count': $count?.toJson(),
+        '_avg': $avg?.toJson(),
+        '_sum': $sum?.toJson(),
+        '_min': $min?.toJson(),
+        '_max': $max?.toJson(),
+      };
+}
+
+class ChatsEntityCountOrderByAggregateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityCountOrderByAggregateInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i2.SortOrder? id;
+
+  final _i2.SortOrder? name;
+
+  final _i2.SortOrder? description;
+
+  final _i2.SortOrder? createdAt;
+
+  final _i2.SortOrder? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityAvgOrderByAggregateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityAvgOrderByAggregateInput({this.id});
+
+  final _i2.SortOrder? id;
+
+  @override
+  Map<String, dynamic> toJson() => {'id': id};
+}
+
+class ChatsEntityMaxOrderByAggregateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityMaxOrderByAggregateInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i2.SortOrder? id;
+
+  final _i2.SortOrder? name;
+
+  final _i2.SortOrder? description;
+
+  final _i2.SortOrder? createdAt;
+
+  final _i2.SortOrder? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityMinOrderByAggregateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityMinOrderByAggregateInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i2.SortOrder? id;
+
+  final _i2.SortOrder? name;
+
+  final _i2.SortOrder? description;
+
+  final _i2.SortOrder? createdAt;
+
+  final _i2.SortOrder? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntitySumOrderByAggregateInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntitySumOrderByAggregateInput({this.id});
+
+  final _i2.SortOrder? id;
+
+  @override
+  Map<String, dynamic> toJson() => {'id': id};
+}
+
+class ChatsEntityOrderByWithAggregationInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityOrderByWithAggregationInput({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+    this.$count,
+    this.$avg,
+    this.$max,
+    this.$min,
+    this.$sum,
+  });
+
+  final _i2.SortOrder? id;
+
+  final _i2.SortOrder? name;
+
+  final _i1.PrismaUnion<_i2.SortOrder, _i2.SortOrderInput>? description;
+
+  final _i2.SortOrder? createdAt;
+
+  final _i2.SortOrder? updatedAt;
+
+  final _i2.ChatsEntityCountOrderByAggregateInput? $count;
+
+  final _i2.ChatsEntityAvgOrderByAggregateInput? $avg;
+
+  final _i2.ChatsEntityMaxOrderByAggregateInput? $max;
+
+  final _i2.ChatsEntityMinOrderByAggregateInput? $min;
+
+  final _i2.ChatsEntitySumOrderByAggregateInput? $sum;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+        '_count': $count,
+        '_avg': $avg,
+        '_max': $max,
+        '_min': $min,
+        '_sum': $sum,
+      };
+}
+
+class ChatsEntityScalarWhereWithAggregatesInput
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityScalarWhereWithAggregatesInput({
+    this.AND,
+    this.OR,
+    this.NOT,
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final _i1.PrismaUnion<_i2.ChatsEntityScalarWhereWithAggregatesInput,
+      Iterable<_i2.ChatsEntityScalarWhereWithAggregatesInput>>? AND;
+
+  final Iterable<_i2.ChatsEntityScalarWhereWithAggregatesInput>? OR;
+
+  final _i1.PrismaUnion<_i2.ChatsEntityScalarWhereWithAggregatesInput,
+      Iterable<_i2.ChatsEntityScalarWhereWithAggregatesInput>>? NOT;
+
+  final _i1.PrismaUnion<_i2.IntWithAggregatesFilter, int>? id;
+
+  final _i1.PrismaUnion<_i2.StringWithAggregatesFilter, String>? name;
+
+  final _i1.PrismaUnion<_i2.StringNullableWithAggregatesFilter,
+      _i1.PrismaUnion<String, _i1.PrismaNull>>? description;
+
+  final _i1.PrismaUnion<_i2.DateTimeWithAggregatesFilter, DateTime>? createdAt;
+
+  final _i1.PrismaUnion<_i2.DateTimeWithAggregatesFilter, DateTime>? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'AND': AND,
+        'OR': OR,
+        'NOT': NOT,
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityCountAggregateOutputTypeSelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityCountAggregateOutputTypeSelect({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+    this.$all,
+  });
+
+  final bool? id;
+
+  final bool? name;
+
+  final bool? description;
+
+  final bool? createdAt;
+
+  final bool? updatedAt;
+
+  final bool? $all;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+        '_all': $all,
+      };
+}
+
+class ChatsEntityGroupByOutputTypeCountArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityGroupByOutputTypeCountArgs({this.select});
+
+  final _i2.ChatsEntityCountAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class ChatsEntityAvgAggregateOutputTypeSelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityAvgAggregateOutputTypeSelect({this.id});
+
+  final bool? id;
+
+  @override
+  Map<String, dynamic> toJson() => {'id': id};
+}
+
+class ChatsEntityGroupByOutputTypeAvgArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityGroupByOutputTypeAvgArgs({this.select});
+
+  final _i2.ChatsEntityAvgAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class ChatsEntitySumAggregateOutputTypeSelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntitySumAggregateOutputTypeSelect({this.id});
+
+  final bool? id;
+
+  @override
+  Map<String, dynamic> toJson() => {'id': id};
+}
+
+class ChatsEntityGroupByOutputTypeSumArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityGroupByOutputTypeSumArgs({this.select});
+
+  final _i2.ChatsEntitySumAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class ChatsEntityMinAggregateOutputTypeSelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityMinAggregateOutputTypeSelect({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final bool? id;
+
+  final bool? name;
+
+  final bool? description;
+
+  final bool? createdAt;
+
+  final bool? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityGroupByOutputTypeMinArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityGroupByOutputTypeMinArgs({this.select});
+
+  final _i2.ChatsEntityMinAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class ChatsEntityMaxAggregateOutputTypeSelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityMaxAggregateOutputTypeSelect({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  final bool? id;
+
+  final bool? name;
+
+  final bool? description;
+
+  final bool? createdAt;
+
+  final bool? updatedAt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}
+
+class ChatsEntityGroupByOutputTypeMaxArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityGroupByOutputTypeMaxArgs({this.select});
+
+  final _i2.ChatsEntityMaxAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class ChatsEntityGroupByOutputTypeSelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const ChatsEntityGroupByOutputTypeSelect({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  final bool? id;
+
+  final bool? name;
+
+  final bool? description;
+
+  final bool? createdAt;
+
+  final bool? updatedAt;
+
+  final _i1.PrismaUnion<bool, _i2.ChatsEntityGroupByOutputTypeCountArgs>?
+      $count;
+
+  final _i1.PrismaUnion<bool, _i2.ChatsEntityGroupByOutputTypeAvgArgs>? $avg;
+
+  final _i1.PrismaUnion<bool, _i2.ChatsEntityGroupByOutputTypeSumArgs>? $sum;
+
+  final _i1.PrismaUnion<bool, _i2.ChatsEntityGroupByOutputTypeMinArgs>? $min;
+
+  final _i1.PrismaUnion<bool, _i2.ChatsEntityGroupByOutputTypeMaxArgs>? $max;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+        '_count': $count,
+        '_avg': $avg,
+        '_sum': $sum,
+        '_min': $min,
+        '_max': $max,
+      };
+}
+
+class AggregateChatsEntity {
+  const AggregateChatsEntity({
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  factory AggregateChatsEntity.fromJson(Map json) => AggregateChatsEntity(
+        $count: json['_count'] is Map
+            ? _i2.ChatsEntityCountAggregateOutputType.fromJson(json['_count'])
+            : null,
+        $avg: json['_avg'] is Map
+            ? _i2.ChatsEntityAvgAggregateOutputType.fromJson(json['_avg'])
+            : null,
+        $sum: json['_sum'] is Map
+            ? _i2.ChatsEntitySumAggregateOutputType.fromJson(json['_sum'])
+            : null,
+        $min: json['_min'] is Map
+            ? _i2.ChatsEntityMinAggregateOutputType.fromJson(json['_min'])
+            : null,
+        $max: json['_max'] is Map
+            ? _i2.ChatsEntityMaxAggregateOutputType.fromJson(json['_max'])
+            : null,
+      );
+
+  final _i2.ChatsEntityCountAggregateOutputType? $count;
+
+  final _i2.ChatsEntityAvgAggregateOutputType? $avg;
+
+  final _i2.ChatsEntitySumAggregateOutputType? $sum;
+
+  final _i2.ChatsEntityMinAggregateOutputType? $min;
+
+  final _i2.ChatsEntityMaxAggregateOutputType? $max;
+
+  Map<String, dynamic> toJson() => {
+        '_count': $count?.toJson(),
+        '_avg': $avg?.toJson(),
+        '_sum': $sum?.toJson(),
+        '_min': $min?.toJson(),
+        '_max': $max?.toJson(),
+      };
+}
+
+class AggregateChatsEntityCountArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateChatsEntityCountArgs({this.select});
+
+  final _i2.ChatsEntityCountAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class AggregateChatsEntityAvgArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateChatsEntityAvgArgs({this.select});
+
+  final _i2.ChatsEntityAvgAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class AggregateChatsEntitySumArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateChatsEntitySumArgs({this.select});
+
+  final _i2.ChatsEntitySumAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class AggregateChatsEntityMinArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateChatsEntityMinArgs({this.select});
+
+  final _i2.ChatsEntityMinAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class AggregateChatsEntityMaxArgs
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateChatsEntityMaxArgs({this.select});
+
+  final _i2.ChatsEntityMaxAggregateOutputTypeSelect? select;
+
+  @override
+  Map<String, dynamic> toJson() => {'select': select};
+}
+
+class AggregateChatsEntitySelect
+    implements _i1.JsonConvertible<Map<String, dynamic>> {
+  const AggregateChatsEntitySelect({
+    this.$count,
+    this.$avg,
+    this.$sum,
+    this.$min,
+    this.$max,
+  });
+
+  final _i1.PrismaUnion<bool, _i2.AggregateChatsEntityCountArgs>? $count;
+
+  final _i1.PrismaUnion<bool, _i2.AggregateChatsEntityAvgArgs>? $avg;
+
+  final _i1.PrismaUnion<bool, _i2.AggregateChatsEntitySumArgs>? $sum;
+
+  final _i1.PrismaUnion<bool, _i2.AggregateChatsEntityMinArgs>? $min;
+
+  final _i1.PrismaUnion<bool, _i2.AggregateChatsEntityMaxArgs>? $max;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        '_count': $count,
+        '_avg': $avg,
+        '_sum': $sum,
+        '_min': $min,
+        '_max': $max,
+      };
+}

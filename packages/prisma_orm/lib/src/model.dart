@@ -69,3 +69,39 @@ class ProjectEntity {
         'updatedAt': updatedAt,
       };
 }
+
+class ChatsEntity {
+  const ChatsEntity({
+    this.id,
+    this.name,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  factory ChatsEntity.fromJson(Map json) => ChatsEntity(
+        id: json['id'],
+        name: json['name'],
+        description: json['description'],
+        createdAt: json['createdAt'],
+        updatedAt: json['updatedAt'],
+      );
+
+  final int? id;
+
+  final String? name;
+
+  final String? description;
+
+  final DateTime? createdAt;
+
+  final DateTime? updatedAt;
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'description': description,
+        'createdAt': createdAt,
+        'updatedAt': updatedAt,
+      };
+}

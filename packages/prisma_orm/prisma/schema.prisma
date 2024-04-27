@@ -29,5 +29,3 @@ model ProjectEntity {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
-
-

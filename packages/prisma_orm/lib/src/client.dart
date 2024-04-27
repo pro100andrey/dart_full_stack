@@ -902,6 +902,454 @@ class ProjectEntityDelegate {
   }
 }
 
+class ChatsEntityDelegate {
+  const ChatsEntityDelegate._(this._client);
+
+  final PrismaClient _client;
+
+  _i1.ActionClient<_i2.ChatsEntity?> findUnique({
+    required _i3.ChatsEntityWhereUniqueInput where,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.findUnique,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity?>(
+      action: 'findUniqueChatsEntity',
+      result: result,
+      factory: (e) => e != null ? _i2.ChatsEntity.fromJson(e) : null,
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity> findUniqueOrThrow({
+    required _i3.ChatsEntityWhereUniqueInput where,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.findUniqueOrThrow,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity>(
+      action: 'findUniqueChatsEntityOrThrow',
+      result: result,
+      factory: (e) => _i2.ChatsEntity.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity?> findFirst({
+    _i3.ChatsEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ChatsEntityOrderByWithRelationInput>,
+            _i3.ChatsEntityOrderByWithRelationInput>?
+        orderBy,
+    _i3.ChatsEntityWhereUniqueInput? cursor,
+    int? take,
+    int? skip,
+    _i1.PrismaUnion<_i3.ChatsEntityScalar, Iterable<_i3.ChatsEntityScalar>>?
+        distinct,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'orderBy': orderBy,
+      'cursor': cursor,
+      'take': take,
+      'skip': skip,
+      'distinct': distinct,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.findFirst,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity?>(
+      action: 'findFirstChatsEntity',
+      result: result,
+      factory: (e) => e != null ? _i2.ChatsEntity.fromJson(e) : null,
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity> findFirstOrThrow({
+    _i3.ChatsEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ChatsEntityOrderByWithRelationInput>,
+            _i3.ChatsEntityOrderByWithRelationInput>?
+        orderBy,
+    _i3.ChatsEntityWhereUniqueInput? cursor,
+    int? take,
+    int? skip,
+    _i1.PrismaUnion<_i3.ChatsEntityScalar, Iterable<_i3.ChatsEntityScalar>>?
+        distinct,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'orderBy': orderBy,
+      'cursor': cursor,
+      'take': take,
+      'skip': skip,
+      'distinct': distinct,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.findFirstOrThrow,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity>(
+      action: 'findFirstChatsEntityOrThrow',
+      result: result,
+      factory: (e) => _i2.ChatsEntity.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<Iterable<_i2.ChatsEntity>> findMany({
+    _i3.ChatsEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ChatsEntityOrderByWithRelationInput>,
+            _i3.ChatsEntityOrderByWithRelationInput>?
+        orderBy,
+    _i3.ChatsEntityWhereUniqueInput? cursor,
+    int? take,
+    int? skip,
+    _i1.PrismaUnion<_i3.ChatsEntityScalar, Iterable<_i3.ChatsEntityScalar>>?
+        distinct,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'orderBy': orderBy,
+      'cursor': cursor,
+      'take': take,
+      'skip': skip,
+      'distinct': distinct,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.findMany,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<Iterable<_i2.ChatsEntity>>(
+      action: 'findManyChatsEntity',
+      result: result,
+      factory: (values) =>
+          (values as Iterable).map((e) => _i2.ChatsEntity.fromJson(e)),
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity> create({
+    required _i1.PrismaUnion<_i3.ChatsEntityCreateInput,
+            _i3.ChatsEntityUncheckedCreateInput>
+        data,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'data': data,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.createOne,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity>(
+      action: 'createOneChatsEntity',
+      result: result,
+      factory: (e) => _i2.ChatsEntity.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<_i3.AffectedRowsOutput> createMany({
+    required _i1.PrismaUnion<_i3.ChatsEntityCreateManyInput,
+            Iterable<_i3.ChatsEntityCreateManyInput>>
+        data,
+    bool? skipDuplicates,
+  }) {
+    final args = {
+      'data': data,
+      'skipDuplicates': skipDuplicates,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.createMany,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i3.AffectedRowsOutput>(
+      action: 'createManyChatsEntity',
+      result: result,
+      factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity?> update({
+    required _i1.PrismaUnion<_i3.ChatsEntityUpdateInput,
+            _i3.ChatsEntityUncheckedUpdateInput>
+        data,
+    required _i3.ChatsEntityWhereUniqueInput where,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'data': data,
+      'where': where,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.updateOne,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity?>(
+      action: 'updateOneChatsEntity',
+      result: result,
+      factory: (e) => e != null ? _i2.ChatsEntity.fromJson(e) : null,
+    );
+  }
+
+  _i1.ActionClient<_i3.AffectedRowsOutput> updateMany({
+    required _i1.PrismaUnion<_i3.ChatsEntityUpdateManyMutationInput,
+            _i3.ChatsEntityUncheckedUpdateManyInput>
+        data,
+    _i3.ChatsEntityWhereInput? where,
+  }) {
+    final args = {
+      'data': data,
+      'where': where,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.updateMany,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i3.AffectedRowsOutput>(
+      action: 'updateManyChatsEntity',
+      result: result,
+      factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity> upsert({
+    required _i3.ChatsEntityWhereUniqueInput where,
+    required _i1.PrismaUnion<_i3.ChatsEntityCreateInput,
+            _i3.ChatsEntityUncheckedCreateInput>
+        create,
+    required _i1.PrismaUnion<_i3.ChatsEntityUpdateInput,
+            _i3.ChatsEntityUncheckedUpdateInput>
+        update,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'create': create,
+      'update': update,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.upsertOne,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity>(
+      action: 'upsertOneChatsEntity',
+      result: result,
+      factory: (e) => _i2.ChatsEntity.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<_i2.ChatsEntity?> delete({
+    required _i3.ChatsEntityWhereUniqueInput where,
+    _i3.ChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.deleteOne,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i2.ChatsEntity?>(
+      action: 'deleteOneChatsEntity',
+      result: result,
+      factory: (e) => e != null ? _i2.ChatsEntity.fromJson(e) : null,
+    );
+  }
+
+  _i1.ActionClient<_i3.AffectedRowsOutput> deleteMany(
+      {_i3.ChatsEntityWhereInput? where}) {
+    final args = {'where': where};
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.deleteMany,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i3.AffectedRowsOutput>(
+      action: 'deleteManyChatsEntity',
+      result: result,
+      factory: (e) => _i3.AffectedRowsOutput.fromJson(e),
+    );
+  }
+
+  _i1.ActionClient<Iterable<_i3.ChatsEntityGroupByOutputType>> groupBy({
+    _i3.ChatsEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ChatsEntityOrderByWithAggregationInput>,
+            _i3.ChatsEntityOrderByWithAggregationInput>?
+        orderBy,
+    required _i1
+        .PrismaUnion<Iterable<_i3.ChatsEntityScalar>, _i3.ChatsEntityScalar>
+        by,
+    _i3.ChatsEntityScalarWhereWithAggregatesInput? having,
+    int? take,
+    int? skip,
+    _i3.ChatsEntityGroupByOutputTypeSelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'orderBy': orderBy,
+      'by': _i1.JsonQuery.groupBySerializer(by),
+      'having': having,
+      'take': take,
+      'skip': skip,
+      'select': select ?? _i1.JsonQuery.groupBySelectSerializer(by),
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.groupBy,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<Iterable<_i3.ChatsEntityGroupByOutputType>>(
+      action: 'groupByChatsEntity',
+      result: result,
+      factory: (values) => (values as Iterable)
+          .map((e) => _i3.ChatsEntityGroupByOutputType.fromJson(e)),
+    );
+  }
+
+  _i1.ActionClient<_i3.AggregateChatsEntity> aggregate({
+    _i3.ChatsEntityWhereInput? where,
+    _i1.PrismaUnion<Iterable<_i3.ChatsEntityOrderByWithRelationInput>,
+            _i3.ChatsEntityOrderByWithRelationInput>?
+        orderBy,
+    _i3.ChatsEntityWhereUniqueInput? cursor,
+    int? take,
+    int? skip,
+    _i3.AggregateChatsEntitySelect? select,
+  }) {
+    final args = {
+      'where': where,
+      'orderBy': orderBy,
+      'cursor': cursor,
+      'take': take,
+      'skip': skip,
+      'select': select,
+    };
+    final query = _i1.serializeJsonQuery(
+      args: args,
+      modelName: 'ChatsEntity',
+      action: _i1.JsonQueryAction.aggregate,
+      datamodel: PrismaClient.datamodel,
+    );
+    final result = _client._engine.request(
+      query,
+      headers: _client.$transaction.headers,
+      transaction: _client.$transaction.transaction,
+    );
+    return _i1.ActionClient<_i3.AggregateChatsEntity>(
+      action: 'aggregateChatsEntity',
+      result: result,
+      factory: (e) => _i3.AggregateChatsEntity.fromJson(e),
+    );
+  }
+}
+
 class PrismaClient {
   const PrismaClient._(
     this._engine,
@@ -929,7 +1377,7 @@ class PrismaClient {
     }
     final engine = _i4.BinaryEngine(
       schema:
-          '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = "dart run orm"\n  output   = "../lib/src/"\n}\n\ndatasource db {\n  provider = "postgresql"\n  url      = env("DATABASE_URL")\n}\n\nmodel UserEntity {\n  id    Int     @id @default(autoincrement())\n  email String  @unique\n  name  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\nmodel ProjectEntity {\n  id    Int     @id @default(autoincrement())\n  name String\n  description  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\n\n',
+          '// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = "dart run orm"\n  output   = "../lib/src/"\n}\n\ndatasource db {\n  provider = "postgresql"\n  url      = env("DATABASE_URL")\n}\n\nmodel UserEntity {\n  id    Int     @id @default(autoincrement())\n  email String  @unique\n  name  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\nmodel ProjectEntity {\n  id    Int     @id @default(autoincrement())\n  name String\n  description  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\nmodel ChatsEntity {\n  id    Int     @id @default(autoincrement())\n  name String\n  description  String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n\n\n\n',
       datasources: datasources,
     );
     final metrics = _i1.MetricsClient(engine);
@@ -1116,6 +1564,89 @@ class PrismaClient {
         'uniqueIndexes': [],
         'isGenerated': false,
       },
+      {
+        'name': 'ChatsEntity',
+        'dbName': null,
+        'fields': [
+          {
+            'name': 'id',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': true,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'Int',
+            'default': {
+              'name': 'autoincrement',
+              'args': [],
+            },
+            'isGenerated': false,
+            'isUpdatedAt': false,
+          },
+          {
+            'name': 'name',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': false,
+            'type': 'String',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+          },
+          {
+            'name': 'description',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': false,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': false,
+            'type': 'String',
+            'isGenerated': false,
+            'isUpdatedAt': false,
+          },
+          {
+            'name': 'createdAt',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': true,
+            'type': 'DateTime',
+            'default': {
+              'name': 'now',
+              'args': [],
+            },
+            'isGenerated': false,
+            'isUpdatedAt': false,
+          },
+          {
+            'name': 'updatedAt',
+            'kind': 'scalar',
+            'isList': false,
+            'isRequired': true,
+            'isUnique': false,
+            'isId': false,
+            'isReadOnly': false,
+            'hasDefaultValue': false,
+            'type': 'DateTime',
+            'isGenerated': false,
+            'isUpdatedAt': true,
+          },
+        ],
+        'primaryKey': null,
+        'uniqueFields': [],
+        'uniqueIndexes': [],
+        'isGenerated': false,
+      },
     ],
     'types': [],
   });
@@ -1133,6 +1664,8 @@ class PrismaClient {
   UserEntityDelegate get userEntity => UserEntityDelegate._(this);
 
   ProjectEntityDelegate get projectEntity => ProjectEntityDelegate._(this);
+
+  ChatsEntityDelegate get chatsEntity => ChatsEntityDelegate._(this);
 
   _i1.RawClient<PrismaClient> get $raw => _i1.RawClient<PrismaClient>(
         _engine,

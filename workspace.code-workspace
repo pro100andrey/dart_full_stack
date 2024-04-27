@@ -13,13 +13,18 @@
             "path": "packages"
         },
         {
+            "name": "tools",
+            "path": "tools"
+        },
+        {
             "name": "scripts",
             "path": "scripts"
         }
     ],
     "settings": {
         "cSpell.words": ["mocktail", "pocketbase"],
-        "codeTemplateTool.templatesPath": "{workspace}/"
+        "codeTemplateTool.templatesPath": "{workspace}/",
+        "prisma.fileWatcher": true
     },
     "tasks": {
         "version": "2.0.0",
