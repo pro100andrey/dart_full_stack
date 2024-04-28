@@ -30,9 +30,7 @@ Handler middleware(Handler handler) => handler
     )
     .use(
       requestLogger(
-        logger: (message, isError) {
-          print('$message\n');
-        },
+        logger: (message, isError) {},
       ),
     )
     .use(

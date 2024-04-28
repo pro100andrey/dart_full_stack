@@ -26,6 +26,7 @@
         "codeTemplateTool.templatesPath": "{workspace}/",
         "prisma.fileWatcher": true
     },
+    
     "tasks": {
         "version": "2.0.0",
         "tasks": [

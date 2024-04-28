@@ -1,24 +1,17 @@
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
 import 'package:cli_completion/cli_completion.dart';
-import 'package:lake_cli/src/commands/commands.dart';
-import 'package:lake_cli/src/version.dart';
 import 'package:mason_logger/mason_logger.dart';
 import 'package:pub_updater/pub_updater.dart';
+
+import 'commands/commands.dart';
+import 'version.dart';
 
 const executableName = 'lake';
 const packageName = 'lake_cli';
 const description = 'A Dart CLI tool for full-stack development.';
 
-/// {@template lake_cli_command_runner}
-/// A [CommandRunner] for the CLI.
-///
-/// ```
-/// $ lake --version
-/// ```
-/// {@endtemplate}
 class LakeCliCommandRunner extends CompletionCommandRunner<int> {
-  /// {@macro lake_cli_command_runner}
   LakeCliCommandRunner({
     Logger? logger,
     PubUpdater? pubUpdater,
@@ -139,6 +132,6 @@ ${lightYellow.wrap('Update available!')} ${lightCyan.wrap(packageVersion)} \u219
 Run ${lightCyan.wrap('$executableName update')} to update''',
           );
       }
-    } catch (_) {}
+    } on Object catch (_) {}
   }
 }

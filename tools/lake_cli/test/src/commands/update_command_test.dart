@@ -33,10 +33,10 @@ void main() {
       );
 
       when(
-        () => pubUpdater.getLatestVersion(any()),
+        () async => pubUpdater.getLatestVersion(any()),
       ).thenAnswer((_) async => packageVersion);
       when(
-        () => pubUpdater.update(
+        () async => pubUpdater.update(
           packageName: packageName,
           versionConstraint: latestVersion,
         ),
@@ -44,14 +44,16 @@ void main() {
         (_) async => ProcessResult(0, ExitCode.success.code, null, null),
       );
       when(
-        () => pubUpdater.isUpToDate(
+        () async => pubUpdater.isUpToDate(
           packageName: any(named: 'packageName'),
           currentVersion: any(named: 'currentVersion'),
         ),
       ).thenAnswer((_) async => true);
-      when(() => progress.complete(any())).thenAnswer((_) {
-        final message = _.positionalArguments.elementAt(0) as String?;
-        if (message != null) progressLogs.add(message);
+      when(() => progress.complete(any())).thenAnswer((i) {
+        final message = i.positionalArguments.elementAt(0) as String?;
+        if (message != null) {
+          progressLogs.add(message);
+        }
       });
       when(() => logger.progress(any())).thenReturn(progress);
     });
