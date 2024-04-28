@@ -17,6 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$GeneratorConfig {
   String get projectName => throw _privateConstructorUsedError;
+  String get projectPath => throw _privateConstructorUsedError;
+  ApiGeneratorConfig get apiGeneratorConfig =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $GeneratorConfigCopyWith<GeneratorConfig> get copyWith =>
@@ -29,7 +32,12 @@ abstract class $GeneratorConfigCopyWith<$Res> {
           GeneratorConfig value, $Res Function(GeneratorConfig) then) =
       _$GeneratorConfigCopyWithImpl<$Res, GeneratorConfig>;
   @useResult
-  $Res call({String projectName});
+  $Res call(
+      {String projectName,
+      String projectPath,
+      ApiGeneratorConfig apiGeneratorConfig});
+
+  $ApiGeneratorConfigCopyWith<$Res> get apiGeneratorConfig;
 }
 
 /// @nodoc
@@ -46,13 +54,32 @@ class _$GeneratorConfigCopyWithImpl<$Res, $Val extends GeneratorConfig>
   @override
   $Res call({
     Object? projectName = null,
+    Object? projectPath = null,
+    Object? apiGeneratorConfig = null,
   }) {
     return _then(_value.copyWith(
       projectName: null == projectName
           ? _value.projectName
           : projectName // ignore: cast_nullable_to_non_nullable
               as String,
+      projectPath: null == projectPath
+          ? _value.projectPath
+          : projectPath // ignore: cast_nullable_to_non_nullable
+              as String,
+      apiGeneratorConfig: null == apiGeneratorConfig
+          ? _value.apiGeneratorConfig
+          : apiGeneratorConfig // ignore: cast_nullable_to_non_nullable
+              as ApiGeneratorConfig,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ApiGeneratorConfigCopyWith<$Res> get apiGeneratorConfig {
+    return $ApiGeneratorConfigCopyWith<$Res>(_value.apiGeneratorConfig,
+        (value) {
+      return _then(_value.copyWith(apiGeneratorConfig: value) as $Val);
+    });
   }
 }
 
@@ -64,7 +91,13 @@ abstract class _$$GeneratorConfigImplCopyWith<$Res>
       __$$GeneratorConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String projectName});
+  $Res call(
+      {String projectName,
+      String projectPath,
+      ApiGeneratorConfig apiGeneratorConfig});
+
+  @override
+  $ApiGeneratorConfigCopyWith<$Res> get apiGeneratorConfig;
 }
 
 /// @nodoc
@@ -79,12 +112,22 @@ class __$$GeneratorConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? projectName = null,
+    Object? projectPath = null,
+    Object? apiGeneratorConfig = null,
   }) {
     return _then(_$GeneratorConfigImpl(
       projectName: null == projectName
           ? _value.projectName
           : projectName // ignore: cast_nullable_to_non_nullable
               as String,
+      projectPath: null == projectPath
+          ? _value.projectPath
+          : projectPath // ignore: cast_nullable_to_non_nullable
+              as String,
+      apiGeneratorConfig: null == apiGeneratorConfig
+          ? _value.apiGeneratorConfig
+          : apiGeneratorConfig // ignore: cast_nullable_to_non_nullable
+              as ApiGeneratorConfig,
     ));
   }
 }
@@ -92,14 +135,21 @@ class __$$GeneratorConfigImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GeneratorConfigImpl implements _GeneratorConfig {
-  _$GeneratorConfigImpl({required this.projectName});
+  _$GeneratorConfigImpl(
+      {required this.projectName,
+      required this.projectPath,
+      required this.apiGeneratorConfig});
 
   @override
   final String projectName;
+  @override
+  final String projectPath;
+  @override
+  final ApiGeneratorConfig apiGeneratorConfig;
 
   @override
   String toString() {
-    return 'GeneratorConfig(projectName: $projectName)';
+    return 'GeneratorConfig(projectName: $projectName, projectPath: $projectPath, apiGeneratorConfig: $apiGeneratorConfig)';
   }
 
   @override
@@ -108,11 +158,16 @@ class _$GeneratorConfigImpl implements _GeneratorConfig {
         (other.runtimeType == runtimeType &&
             other is _$GeneratorConfigImpl &&
             (identical(other.projectName, projectName) ||
-                other.projectName == projectName));
+                other.projectName == projectName) &&
+            (identical(other.projectPath, projectPath) ||
+                other.projectPath == projectPath) &&
+            (identical(other.apiGeneratorConfig, apiGeneratorConfig) ||
+                other.apiGeneratorConfig == apiGeneratorConfig));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, projectName);
+  int get hashCode =>
+      Object.hash(runtimeType, projectName, projectPath, apiGeneratorConfig);
 
   @JsonKey(ignore: true)
   @override
@@ -123,11 +178,18 @@ class _$GeneratorConfigImpl implements _GeneratorConfig {
 }
 
 abstract class _GeneratorConfig implements GeneratorConfig {
-  factory _GeneratorConfig({required final String projectName}) =
+  factory _GeneratorConfig(
+          {required final String projectName,
+          required final String projectPath,
+          required final ApiGeneratorConfig apiGeneratorConfig}) =
       _$GeneratorConfigImpl;
 
   @override
   String get projectName;
+  @override
+  String get projectPath;
+  @override
+  ApiGeneratorConfig get apiGeneratorConfig;
   @override
   @JsonKey(ignore: true)
   _$$GeneratorConfigImplCopyWith<_$GeneratorConfigImpl> get copyWith =>

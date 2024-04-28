@@ -10,9 +10,15 @@ Future<GeneratorConfig> loadGeneratorConfig({String? path}) async {
   try {
     final pubspec = parsePubspec(pubspecPath);
 
+    final apiGeneratorConfig = parseApiGeneratorConfig(pubspecPath);
+
     final name = pubspec.name;
 
-    return GeneratorConfig(projectName: name);
+    return GeneratorConfig(
+      projectName: name,
+      projectPath: dir,
+      apiGeneratorConfig: apiGeneratorConfig,
+    );
   } on Object catch (e) {
     throw Exception(
       'Error while parsing pubspec file: $pubspecPath: $e',
