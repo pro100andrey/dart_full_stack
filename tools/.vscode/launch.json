@@ -9,7 +9,7 @@
             "request": "launch",
             "type": "dart",
             "program": "lake_cli/bin/lake.dart",
-            "args": ["generate"]
+            "args": ["generate", "--dir", "../../server"]
         }
     ]
 }

@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 class _MockLogger extends Mock implements Logger {}
 
 void main() {
-  group('sample', () {
+  group('generate', () {
     late Logger logger;
     late LakeCliCommandRunner commandRunner;
 
@@ -15,15 +15,6 @@ void main() {
       commandRunner = LakeCliCommandRunner(logger: logger);
     });
 
-    test('tells a joke', () async {
-      final exitCode = await commandRunner.run(['sample']);
-
-      expect(exitCode, ExitCode.success.code);
-
-      verify(
-        () => logger.info('Which unicorn has a cold? The Achoo-nicorn!'),
-      ).called(1);
-    });
     test('tells a joke in cyan', () async {
       final exitCode = await commandRunner.run(['sample', '-c']);
 
